@@ -1,0 +1,21 @@
+{
+    "name": "dimsog/wn-blog-plugin",
+    "type": "winter-plugin",
+    "version": "1.0.1",
+    "description": "A simple blog plugin for WinterCMS",
+    "keywords": ["blog", "winter", "winter blog plugin", "wintercms blog plugin"],
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/dimsog/wn-blog-plugin/issues",
+        "source": "https://github.com/dimsog/wn-blog-plugin"
+    },
+    "authors": [
+        {
+            "name": "Dmitry R",
+            "email": "dimsog@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.0"
+    }
+}
