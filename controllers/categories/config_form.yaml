@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Category
+
+# Model Form Field configuration
+form: $/dimsog/blog/models/category/fields.yaml
+
+# Model Class name
+modelClass: Dimsog\Blog\Models\Category
+
+# Default redirect location
+defaultRedirect: dimsog/blog/categories
+
+# Create page
+create:
+    title: Новая категория
+    redirect: dimsog/blog/categories/update/:id
+    redirectClose: dimsog/blog/categories
+
+# Update page
+update:
+    title: Обновление категории
+    redirect: dimsog/blog/categories
+    redirectClose: dimsog/blog/categories
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

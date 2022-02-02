@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Post Type
+
+# Model Form Field configuration
+form: $/dimsog/blog/models/posttype/fields.yaml
+
+# Model Class name
+modelClass: Dimsog\Blog\Models\PostType
+
+# Default redirect location
+defaultRedirect: dimsog/blog/posttypes
+
+# Create page
+create:
+    title: Новый тип записи
+    redirect: dimsog/blog/posttypes/update/:id
+    redirectClose: dimsog/blog/posttypes
+
+# Update page
+update:
+    title: Обновление типа записи
+    redirect: dimsog/blog/posttypes
+    redirectClose: dimsog/blog/posttypes
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

@@ -1,0 +1,59 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: Название
+        required: true
+        span: auto
+    slug:
+        label: URL
+        preset:
+            field: name
+            type: slug
+        required: true
+        span: auto
+    category_id:
+        label: 'Категория'
+        showSearch: true
+        required: 1
+        span: auto
+        type: dropdown
+    type_id:
+        label: 'Тип'
+        showSearch: true
+        required: 1
+        span: auto
+        type: dropdown
+    active:
+        type: switch
+        label: Опубликовано
+        default: true
+tabs:
+    fields:
+        image:
+            label: Изображение
+            mode: image
+            span: auto
+            type: fileupload
+            tab: Основное
+            thumbOptions:
+                mode: crop
+                extension: auto
+        small_text:
+            tab: Основное
+            label: Короткое описание
+            type: textarea
+            size: medium
+        text:
+            tab: Основное
+            label: Текст
+            type: richeditor
+            size: giant
+        tags:
+            tab: Теги
+            context:
+                - update
+            type: partial
+            path: $/dimsog/blog/controllers/posts/_tags_relation.htm

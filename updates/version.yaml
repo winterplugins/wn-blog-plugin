@@ -1,0 +1,10 @@
+1.0.1:
+    - 'Первая версия'
+    - create_categories_table.php
+    - create_post_types_table.php
+    - create_tags_table.php
+    - create_posts_table.php
+    - create_post_tags_table.php
+    - CategorySeeder.php
+    - PostTypeSeeder.php
+    - TagsSeeder.php

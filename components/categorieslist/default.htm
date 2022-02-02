@@ -1,0 +1,7 @@
+<div class="categories">
+    {% for category in items %}
+        <a href="{{ 'category-view' | page({ slug: category.slug }) }}" class="category-item {% if activeCategory.id == category.id %} category-item--active {% endif %}">
+            {{ category.name }}
+        </a>
+    {% endfor %}
+</div>

@@ -1,0 +1,15 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+    name:
+        label: Название
+        searchable: true
+    count:
+        label: Количество постов
+        relation: posts
+        useRelationCount: true

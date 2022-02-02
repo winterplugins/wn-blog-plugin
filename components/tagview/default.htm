@@ -1,0 +1,9 @@
+<section class="tag-view">
+    <h1 class="tag-view__name">
+        #{{ tag.name }}
+    </h1>
+
+    {% for post in items %}
+        {% partial '@post-item' post = post %}
+    {% endfor %}
+</section>

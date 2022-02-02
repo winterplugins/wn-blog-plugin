@@ -1,0 +1,10 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    tag_id:
+        label: Теги
+        relation: tag
+        select: name
+        width: '250px'

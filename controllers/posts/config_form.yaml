@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Post
+
+# Model Form Field configuration
+form: $/dimsog/blog/models/post/fields.yaml
+
+# Model Class name
+modelClass: Dimsog\Blog\Models\Post
+
+# Default redirect location
+defaultRedirect: dimsog/blog/posts
+
+# Create page
+create:
+    title: Новая запись
+    redirect: dimsog/blog/posts/update/:id
+    redirectClose: dimsog/blog/posts
+
+# Update page
+update:
+    title: Обновление записи
+    redirect: dimsog/blog/posts
+    redirectClose: dimsog/blog/posts
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

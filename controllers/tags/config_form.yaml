@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Tag
+
+# Model Form Field configuration
+form: $/dimsog/blog/models/tag/fields.yaml
+
+# Model Class name
+modelClass: Dimsog\Blog\Models\Tag
+
+# Default redirect location
+defaultRedirect: dimsog/blog/tags
+
+# Create page
+create:
+    title: Создание тега
+    redirect: dimsog/blog/tags/update/:id
+    redirectClose: dimsog/blog/tags
+
+# Update page
+update:
+    title: Обновление тега
+    redirect: dimsog/blog/tags
+    redirectClose: dimsog/blog/tags
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

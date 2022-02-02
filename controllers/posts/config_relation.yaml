@@ -1,0 +1,10 @@
+tags:
+  label: Теги
+  manage:
+    list: $/dimsog/blog/models/posttag/columns.yaml
+    form: $/dimsog/blog/models/posttag/fields.yaml
+  view:
+    list: $/dimsog/blog/models/posttag/columns.yaml
+    toolbarButtons:
+      create: Добавить
+      delete: Удалить

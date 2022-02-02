@@ -1,0 +1,26 @@
+<article class="post-item">
+    <header class="post-item__header">
+        <h1>
+            {{ post.name }}
+        </h1>
+        {% partial '@post-summary' %}
+    </header>
+    {% if post.image is not empty %}
+    <section class="post-item__image">
+        <img src="{{ post.image.getThumb(700, 400, { 'mode': 'crop' }) }}" class="img-fluid" alt="{{ post.image.name }}" loading="lazy">
+    </section>
+    {% endif %}
+    <section class="post-item__text">
+        {{ post.text | raw }}
+    </section>
+</article>
+
+{% if post.tags is not empty %}
+<section class="post-tags">
+    {% for postTag in post.tags %}
+        <a href="{{ 'tag-view' | page({ slug: postTag.tag.slug }) }}" class="post-tag-item">
+            {{ postTag.tag.name }}
+        </a>
+    {% endfor %}
+</section>
+{% endif %}
