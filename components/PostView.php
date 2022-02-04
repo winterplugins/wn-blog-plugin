@@ -14,6 +14,7 @@ class PostView extends ComponentBase
         if ($this->post == null) {
             return $this->controller->run('404');
         }
+        $this->post->updateViews();
         $this->page->title = $this->post->name;
         $this->page['activeCategory'] = $this->post->category;
     }

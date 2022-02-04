@@ -91,6 +91,11 @@ class Post extends Model
         return PostType::lists('name', 'id');
     }
 
+    public function updateViews(): void
+    {
+        static::where('id', $this->id)
+            ->increment('views');
+    }
 
     public static function findActiveBySlug(string $slug): ?static
     {

@@ -8,3 +8,6 @@
     - CategorySeeder.php
     - PostTypeSeeder.php
     - TagsSeeder.php
+1.0.2:
+    - 'Add views to posts'
+    - add_views_to_posts.php
