@@ -4,13 +4,14 @@ use Cms\Classes\ComponentBase;
 use Dimsog\Blog\Classes\PostsReader;
 use Dimsog\Blog\Models\Category;
 use Dimsog\Blog\Models\Post;
+use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Database\Eloquent\Collection;
 
 class PostsList extends ComponentBase
 {
     private ?Category $category;
 
-    private Collection $posts;
+    private LengthAwarePaginator $posts;
 
 
     public function componentDetails(): array
@@ -23,7 +24,7 @@ class PostsList extends ComponentBase
 
     public function onRun()
     {
-        $reader = new PostsReader();
+        $reader = new PostsReader($this->property('limit'));
         $slug = $this->property('categorySlug');
         $this->category = Category::findBySlug($slug);
         if (empty($slug) == false && $this->category == null) {
@@ -53,6 +54,10 @@ class PostsList extends ComponentBase
                 'default' => null,
                 'type' => 'string'
             ],
+            'limit' => [
+                'title' => 'Limit',
+                'default' => 20
+            ]
         ];
     }
 }

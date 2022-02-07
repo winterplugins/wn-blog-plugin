@@ -1,3 +1,7 @@
-{% for post in items %}
-    {% partial '@post-item' post = post %}
-{% endfor %}
+<section class="posts">
+    {% for post in items %}
+        {% partial '@post-item' post = post %}
+    {% endfor %}
+
+    {{ items.render | raw }}
+</section>

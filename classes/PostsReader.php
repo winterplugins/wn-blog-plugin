@@ -4,14 +4,22 @@ namespace Dimsog\Blog\Classes;
 
 use Dimsog\Blog\Models\Post;
 use Dimsog\Blog\Models\PostTag;
+use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Database\Eloquent\Collection;
 
 class PostsReader
 {
+    private int $limit;
+
     private int $categoryId = 0;
 
     private int $tagId = 0;
 
+
+    public function __construct(int $limit = 20)
+    {
+        $this->limit = $limit;
+    }
 
     public function setCategoryId(int $categoryId): self
     {
@@ -25,7 +33,7 @@ class PostsReader
         return $this;
     }
 
-    public function read(): Collection
+    public function read(): LengthAwarePaginator
     {
         $query = Post::where('active', 1);
         if ($this->categoryId > 0) {
@@ -36,6 +44,6 @@ class PostsReader
             $query->where('tag_id', $this->tagId);
         }
         $query->orderByDesc('dimsog_blog_posts.id');
-        return $query->get();
+        return $query->paginate($this->limit);
     }
 }
