@@ -17,7 +17,7 @@ class CreatePostsTable extends Migration
             $table->unsignedInteger('type_id');
             $table->string('name');
             $table->string('slug')->unique();
-            $table->string('small_text')->nullable();
+            $table->string('small_text', 2048)->nullable();
             $table->text('text')->nullable();
             $table->unsignedTinyInteger('active')->default(0)->index();
 
