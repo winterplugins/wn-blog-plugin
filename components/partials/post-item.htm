@@ -1,11 +1,11 @@
 <article class="post-item {% if post.type_id == 1 %} post-item--full {% else %} post-item--status {% endif %}">
     {% if post.type_id == 1 %}
     <header class="post-item__header">
-        <h2>
+        <h3>
             <a href="{{ 'post-view' | page({ slug: post.slug }) }}" class="post-item__link">
                 {{ post.name }}
             </a>
-        </h2>
+        </h3>
         {% partial '@post-summary' post = post fromList = true %}
     </header>
     {% if post.image is not empty %}
