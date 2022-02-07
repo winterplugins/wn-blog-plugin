@@ -80,7 +80,7 @@ class Plugin extends PluginBase
             'filters' => [
                 'preparePost' => function (?string $value): string {
                     return preg_replace(
-                        '/(\<p\>\<img src=\"(.+)\"\>\<\/p>)/',
+                        '/(\<p\>\<img src="(.+)"(.*)\>\<\/p>)/',
                         '<div class="post-view__image"><img src="$2"></div>',
                         $value
                     );
