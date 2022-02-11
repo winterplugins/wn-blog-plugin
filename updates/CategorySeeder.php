@@ -11,7 +11,7 @@ class CategorySeeder extends Seeder
     {
         foreach (range(1, 5) as $number) {
             $category = new Category();
-            $category->name = 'Категория ' . $number;
+            $category->name = 'Category ' . $number;
             $category->save();
         }
     }
