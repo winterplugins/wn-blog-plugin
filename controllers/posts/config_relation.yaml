@@ -1,10 +1,10 @@
 tags:
-  label: Теги
+  label: dimsog.blog::lang.controllers.posts.tags
   manage:
     list: $/dimsog/blog/models/posttag/columns.yaml
     form: $/dimsog/blog/models/posttag/fields.yaml
   view:
     list: $/dimsog/blog/models/posttag/columns.yaml
     toolbarButtons:
-      create: Добавить
-      delete: Удалить
+      create: dimsog.blog::lang.controllers.common.create
+      delete: dimsog.blog::lang.controllers.common.delete

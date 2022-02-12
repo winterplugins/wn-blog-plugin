@@ -4,10 +4,10 @@
 
 fields:
     name:
-        label: Название
+        label: dimsog.blog::lang.models.tag.fields.name
         required: true
     slug:
-        label: URL
+        label: dimsog.blog::lang.models.tag.fields.slug
         preset:
             field: name
             type: slug

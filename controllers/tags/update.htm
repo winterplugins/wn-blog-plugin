@@ -1,6 +1,6 @@
 <?php Block::put('breadcrumb') ?>
     <ul>
-        <li><a href="<?= Backend::url('dimsog/blog/tags') ?>">Теги</a></li>
+        <li><a href="<?= Backend::url('dimsog/blog/tags') ?>"><?= e(trans('dimsog.blog::lang.controllers.tags.name')) ?></a></li>
         <li><?= e($this->pageTitle) ?></li>
     </ul>
 <?php Block::endPut() ?>
@@ -20,28 +20,30 @@
                     data-request="onSave"
                     data-request-data="redirect:0"
                     data-hotkey="ctrl+s, cmd+s"
-                    data-load-indicator="Сохранение тега..."
+                    data-load-indicator="<?= e(trans('dimsog.blog::lang.controllers.common.saving')) ?>"
                     class="btn btn-primary">
-                    Сохранить
+                    <?= e(trans('dimsog.blog::lang.controllers.common.save')) ?>
                 </button>
                 <button
                     type="button"
                     data-request="onSave"
                     data-request-data="close:1"
                     data-hotkey="ctrl+enter, cmd+enter"
-                    data-load-indicator="Сохранение тега..."
+                    data-load-indicator="<?= e(trans('dimsog.blog::lang.controllers.common.saving')) ?>"
                     class="btn btn-default">
-                    Сохранить
+                    <?= e(trans('dimsog.blog::lang.controllers.common.save_and_close')) ?>
                 </button>
                 <button
                     type="button"
                     class="oc-icon-trash-o btn-icon danger pull-right"
                     data-request="onDelete"
-                    data-load-indicator="Удаление тега..."
-                    data-request-confirm="Вы уверены?">
+                    data-load-indicator="<?= e(trans('dimsog.blog::lang.controllers.common.deleting')) ?>"
+                    data-request-confirm="<?= e(trans('dimsog.blog::lang.controllers.common.delete_confirm')) ?>">
                 </button>
                 <span class="btn-text">
-                    или <a href="<?= Backend::url('dimsog/blog/tags') ?>">Закрыть</a>
+                    <?= e(trans('dimsog.blog::lang.controllers.common.or')) ?> <a href="<?= Backend::url('dimsog/blog/tags') ?>">
+                    <?= e(trans('dimsog.blog::lang.controllers.common.close')) ?>
+                </a>
                 </span>
             </div>
         </div>

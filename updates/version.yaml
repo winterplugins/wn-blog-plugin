@@ -1,5 +1,5 @@
 1.0.1:
-    - 'Первая версия'
+    - 'First version'
     - create_categories_table.php
     - create_post_types_table.php
     - create_tags_table.php

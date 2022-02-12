@@ -4,8 +4,8 @@
 
 columns:
     id:
-        label: ID
+        label: dimsog.blog::lang.models.posttype.columns.id
         searchable: true
     name:
-        label: Название
+        label: dimsog.blog::lang.models.posttype.columns.name
         searchable: true

@@ -20,8 +20,8 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name'        => 'Blog',
-            'description' => 'No description provided yet...',
+            'name'        => 'dimsog.blog::lang.plugin.name',
+            'description' => 'dimsog.blog::lang.plugin.description',
             'author'      => 'Dimsog',
             'icon'        => 'icon-leaf'
         ];
@@ -98,35 +98,35 @@ class Plugin extends PluginBase
     {
         return [
             'blog' => [
-                'label'       => 'Блог',
+                'label'       => 'dimsog.blog::lang.plugin.navigation.blog',
                 'url'         => Backend::url('dimsog/blog/posts'),
                 'icon'        => 'icon-file-text-o',
                 'permissions' => ['*'],
                 'order'       => 500,
                 'sideMenu' => [
                     'categories' => [
-                        'label'       => 'Категории',
+                        'label'       => 'dimsog.blog::lang.plugin.navigation.categories',
                         'url'         => Backend::url('dimsog/blog/categories'),
                         'icon'        => 'icon-list-ul',
                         'permissions' => ['*'],
                         'order'       => 500
                     ],
                     'posts' => [
-                        'label'       => 'Блог',
+                        'label'       => 'dimsog.blog::lang.plugin.navigation.posts',
                         'url'         => Backend::url('dimsog/blog/posts'),
                         'icon'        => 'icon-file-text-o',
                         'permissions' => ['*'],
                         'order'       => 500
                     ],
                     'tags' => [
-                        'label'       => 'Теги',
+                        'label'       => 'dimsog.blog::lang.plugin.navigation.tags',
                         'url'         => Backend::url('dimsog/blog/tags'),
                         'icon'        => 'icon-link',
                         'permissions' => ['*'],
                         'order'       => 500
                     ],
                     'posttypes' => [
-                        'label'       => 'Типы постов',
+                        'label'       => 'dimsog.blog::lang.plugin.navigation.posttypes',
                         'url'         => Backend::url('dimsog/blog/posttypes'),
                         'icon'        => 'icon-list-ul',
                         'permissions' => ['*'],

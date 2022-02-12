@@ -16,13 +16,13 @@ defaultRedirect: dimsog/blog/posttypes
 
 # Create page
 create:
-    title: Новый тип записи
+    title: dimsog.blog::lang.controllers.common.create
     redirect: dimsog/blog/posttypes/update/:id
     redirectClose: dimsog/blog/posttypes
 
 # Update page
 update:
-    title: Обновление типа записи
+    title: dimsog.blog::lang.controllers.common.update
     redirect: dimsog/blog/posttypes
     redirectClose: dimsog/blog/posttypes
 

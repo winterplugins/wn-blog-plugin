@@ -9,7 +9,7 @@ list: $/dimsog/blog/models/category/columns.yaml
 modelClass: Dimsog\Blog\Models\Category
 
 # List Title
-title: Категории
+title: dimsog.blog::lang.controllers.categories.name
 
 # Link URL for each record
 recordUrl: dimsog/blog/categories/update/:id

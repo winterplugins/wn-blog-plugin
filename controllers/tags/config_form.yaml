@@ -16,13 +16,13 @@ defaultRedirect: dimsog/blog/tags
 
 # Create page
 create:
-    title: Создание тега
+    title: dimsog.blog::lang.controllers.common.create
     redirect: dimsog/blog/tags/update/:id
     redirectClose: dimsog/blog/tags
 
 # Update page
 update:
-    title: Обновление тега
+    title: dimsog.blog::lang.controllers.common.update
     redirect: dimsog/blog/tags
     redirectClose: dimsog/blog/tags
 

@@ -12,7 +12,7 @@ class TagsSeeder extends Seeder
     {
         for ($i = 1; $i <= 10; $i++) {
             $tag = new Tag();
-            $tag->name = 'Тег ' . $i;
+            $tag->name = 'Tag ' . $i;
             $tag->save();
         }
     }

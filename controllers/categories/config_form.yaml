@@ -16,13 +16,13 @@ defaultRedirect: dimsog/blog/categories
 
 # Create page
 create:
-    title: Новая категория
+    title: dimsog.blog::lang.controllers.common.create
     redirect: dimsog/blog/categories/update/:id
     redirectClose: dimsog/blog/categories
 
 # Update page
 update:
-    title: Обновление категории
+    title: dimsog.blog::lang.controllers.common.update
     redirect: dimsog/blog/categories
     redirectClose: dimsog/blog/categories
 

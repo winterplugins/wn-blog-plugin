@@ -4,14 +4,14 @@
 
 columns:
     id:
-        label: ID
+        label: dimsog.blog::lang.models.post.columns.id
         searchable: true
         width: '100px'
     category_id:
-        label: Категория
+        label: dimsog.blog::lang.models.post.columns.category
         relation: category
         select: name
         width: '250px'
     name:
-        label: Название
+        label: dimsog.blog::lang.models.post.columns.name
         searchable: true
