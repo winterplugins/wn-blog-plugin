@@ -10,11 +10,11 @@ class PostTypeSeeder extends Seeder
     public function run()
     {
         $type = new PostType();
-        $type->name = 'Обычная запись';
+        $type->name = 'Post';
         $type->save();
 
         $type = new PostType();
-        $type->name = 'Статус';
+        $type->name = 'Status';
         $type->save();
     }
 }

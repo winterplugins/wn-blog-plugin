@@ -9,7 +9,7 @@ list: $/dimsog/blog/models/post/columns.yaml
 modelClass: Dimsog\Blog\Models\Post
 
 # List Title
-title: Записи
+title: dimsog.blog::lang.controllers.posts.name
 
 # Link URL for each record
 recordUrl: dimsog/blog/posts/update/:id

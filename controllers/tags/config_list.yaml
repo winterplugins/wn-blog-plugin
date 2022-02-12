@@ -9,7 +9,7 @@ list: $/dimsog/blog/models/tag/columns.yaml
 modelClass: Dimsog\Blog\Models\Tag
 
 # List Title
-title: Теги
+title: dimsog.blog::lang.controllers.tags.name
 
 # Link URL for each record
 recordUrl: dimsog/blog/tags/update/:id

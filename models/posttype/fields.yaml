@@ -4,5 +4,5 @@
 
 fields:
     name:
-        label: Название
+        label: dimsog.blog::lang.models.posttype.fields.name
         required: true

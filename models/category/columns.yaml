@@ -4,12 +4,12 @@
 
 columns:
     id:
-        label: ID
+        label: dimsog.blog::lang.models.category.columns.id
         searchable: true
     name:
-        label: Название
+        label: dimsog.blog::lang.models.category.columns.name
         searchable: true
     count:
-        label: Количество постов
+        label: dimsog.blog::lang.models.category.columns.count
         relation: posts
         useRelationCount: true

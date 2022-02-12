@@ -5,4 +5,4 @@
 fields:
     tag_id:
         type: dropdown
-        label: Тег
+        label: dimsog.blog::lang.models.posttag.fields.tag

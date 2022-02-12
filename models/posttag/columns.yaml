@@ -4,7 +4,7 @@
 
 columns:
     tag_id:
-        label: Теги
+        label: dimsog.blog::lang.models.posttag.columns.tag
         relation: tag
         select: name
         width: '250px'

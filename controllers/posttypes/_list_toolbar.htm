@@ -2,7 +2,7 @@
     <a
         href="<?= Backend::url('dimsog/blog/posttypes/create') ?>"
         class="btn btn-primary oc-icon-plus">
-        Новый тип
+        <?= e(trans('dimsog.blog::lang.controllers.common.create')) ?>
     </a>
 
     <button
@@ -16,6 +16,6 @@
         data-trigger-condition="checked"
         data-request-success="$(this).prop('disabled', 'disabled')"
         data-stripe-load-indicator>
-        Удалить выбранные
+        <?= e(trans('dimsog.blog::lang.controllers.common.delete_selected')) ?>
     </button>
 </div>
