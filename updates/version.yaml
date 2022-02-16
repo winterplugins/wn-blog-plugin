@@ -11,3 +11,6 @@
 1.0.2:
     - 'Add views to posts'
     - add_views_to_posts.php
+1.0.3:
+    - 'Remove crop mode from preview'
+    - 'Add image to status'
