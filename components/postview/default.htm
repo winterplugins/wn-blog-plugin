@@ -8,7 +8,7 @@
         </header>
         {% if post.image is not empty %}
         <section class="post-item__image">
-            <img src="{{ post.image.getThumb(700, 400, { 'mode': 'crop' }) }}" class="img-fluid" alt="{{ post.image.name }}" loading="lazy">
+            <img src="{{ post.image.getThumb(700, 400, { 'mode': 'fit' }) }}" class="img-fluid" alt="{{ post.image.name }}" loading="lazy">
         </section>
         {% endif %}
         <section class="post-item__text">

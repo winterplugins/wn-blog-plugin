@@ -11,7 +11,7 @@
     {% if post.image is not empty %}
     <section class="post-item__image">
         <a href="{{ 'post-view' | page({ slug: post.slug }) }}">
-            <img src="{{ post.image.getThumb(700, 400) }}" class="img-fluid" alt="{{ post.image.name }}" loading="lazy">
+            <img src="{{ post.image.getThumb(700, 400, { 'mode': 'fit' }) }}" class="img-fluid" alt="{{ post.image.name }}" loading="lazy">
         </a>
     </section>
     {% endif %}
@@ -22,7 +22,7 @@
         {{ post.name }}
         {% if post.image is not empty %}
         <section class="post-item__image">
-            <img src="{{ post.image.getThumb(700, 400) }}" class="img-fluid" alt="{{ post.image.name }}" loading="lazy">
+            <img src="{{ post.image.getThumb(700, 400, { 'mode': 'fit' }) }}" class="img-fluid" alt="{{ post.image.name }}" loading="lazy">
         </section>
         {% endif %}
     {% endif %}
