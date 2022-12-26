@@ -14,3 +14,6 @@
 1.0.3:
     - 'Remove crop mode from preview'
     - 'Add image to status'
+1.0.4:
+    - create_post_cards_table.php
+    - 'Add: a post cards'

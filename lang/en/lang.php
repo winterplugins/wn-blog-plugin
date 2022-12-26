@@ -9,26 +9,26 @@ return [
             'categories' => 'Categories',
             'posts' => 'Posts',
             'tags' => 'Tags',
-            'posttypes' => 'Post types'
-        ]
+            'posttypes' => 'Post types',
+        ],
     ],
     'models' => [
         'category' => [
             'columns' => [
                 'id' => 'id',
                 'name' => 'Name',
-                'count' => 'Posts'
+                'count' => 'Posts',
             ],
             'fields' => [
                 'name' => 'Name',
-                'slug' => 'Slug'
-            ]
+                'slug' => 'Slug',
+            ],
         ],
         'post' => [
             'columns' => [
                 'id' => 'ID',
                 'category' => 'Category',
-                'name' => 'Name'
+                'name' => 'Name',
             ],
             'fields' => [
                 'category' => 'Category',
@@ -40,36 +40,41 @@ return [
                 'small_text' => 'Small text',
                 'text' => 'Text',
                 'tags' => 'Tags',
-                'general' => 'General'
-            ]
+                'general' => 'General',
+            ],
         ],
         'posttag' => [
             'columns' => [
-                'tag' => 'Tag'
+                'tag' => 'Tag',
             ],
             'fields' => [
-                'tag' => 'Tag'
-            ]
+                'tag' => 'Tag',
+            ],
         ],
         'posttype' => [
             'columns' => [
                 'id' => 'ID',
-                'name' => 'Name'
+                'name' => 'Name',
             ],
             'fields' => [
-                'name' => 'Name'
-            ]
+                'name' => 'Name',
+            ],
         ],
         'tag' => [
             'columns' => [
                 'id' => 'ID',
-                'name' => 'Name'
+                'name' => 'Name',
             ],
             'fields' => [
                 'name' => 'Name',
-                'slug' => 'Slug'
-            ]
-        ]
+                'slug' => 'Slug',
+            ],
+        ],
+        'general' => [
+            'id' => 'ID',
+            'created_at' => 'Created At',
+            'updated_at' => 'Updated At',
+        ],
     ],
     'controllers' => [
         'common' => [
@@ -86,20 +91,20 @@ return [
             'back' => 'Back',
             'save' => 'Save',
             'saving' => 'Saving...',
-            'save_and_close' => 'Save and close'
+            'save_and_close' => 'Save and close',
         ],
         'categories' => [
-            'name' => 'Categories'
+            'name' => 'Categories',
         ],
         'posts' => [
             'name' => 'Posts',
-            'tags' => 'Tags'
+            'tags' => 'Tags',
         ],
         'posttypes' => [
-            'name' => 'Post types'
+            'name' => 'Post types',
         ],
         'tags' => [
-            'name' => 'Tags'
-        ]
-    ]
+            'name' => 'Tags',
+        ],
+    ],
 ];
