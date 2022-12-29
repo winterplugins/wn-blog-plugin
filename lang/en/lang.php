@@ -81,18 +81,11 @@ return [
     'controllers' => [
         'common' => [
             'create' => 'Create',
-            'creating' => 'Creating...',
-            'create_and_close' => 'Create and close',
             'update' => 'Update',
-            'or' => 'or',
-            'close' => 'Close',
             'delete_selected' => 'Delete selected',
             'delete' => 'Delete',
             'delete_confirm' => 'Are your sure?',
             'deleting' => 'Deleting...',
-            'back' => 'Back',
-            'saving' => 'Saving...',
-            'save_and_close' => 'Save and close',
         ],
         'categories' => [
             'name' => 'Categories',
