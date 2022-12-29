@@ -3,10 +3,6 @@
 # ===================================
 
 fields:
-    active:
-        type: switch
-        label: dimsog.blog::lang.models.post.fields.active
-        default: true
     name:
         label: dimsog.blog::lang.models.post.fields.name
         required: true
@@ -31,6 +27,10 @@ tabs:
             path: $/dimsog/blog/controllers/posts/_cards_relation.htm
 secondaryTabs:
     fields:
+        active:
+            type: switch
+            label: dimsog.blog::lang.models.post.fields.active
+            default: true
         image:
             label: dimsog.blog::lang.models.post.fields.image
             mode: image
