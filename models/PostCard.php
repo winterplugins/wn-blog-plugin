@@ -1,7 +1,5 @@
 <?php namespace Dimsog\Blog\Models;
 
-use Backend\FormWidgets\CodeEditor;
-use Backend\FormWidgets\RichEditor;
 use Model;
 use System\Models\File;
 
