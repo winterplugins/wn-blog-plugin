@@ -142,8 +142,8 @@ class PostBlock extends Model
     {
         return [
             'text' => 'Text',
-            'code' => 'Code',
-            'image' => 'Image'
+            'image' => 'Image',
+            'code' => 'Code'
         ];
     }
 }
