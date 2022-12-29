@@ -41,21 +41,6 @@ class Plugin extends PluginBase
         ];
     }
 
-    public function registerMarkupTags(): array
-    {
-        return [
-            'filters' => [
-                'preparePost' => function (?string $value): string {
-                    return preg_replace(
-                        '/(\<p\>\<img src="(.+)"(.*)\>\<\/p>)/',
-                        '<div class="post-view__image"><img src="$2"></div>',
-                        $value
-                    );
-                }
-            ]
-        ];
-    }
-
     /**
      * Registers back-end navigation items for this plugin.
      *
