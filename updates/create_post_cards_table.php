@@ -11,7 +11,7 @@ class CreatePostCardsTable extends Migration
         Schema::create('dimsog_blog_post_cards', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->unsignedInteger('post_id');
+            $table->unsignedInteger('post_id')->nullable();
             $table->string('type');
             $table->longText('text')->nullable();
             $table->longText('code')->nullable();

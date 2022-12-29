@@ -10,6 +10,7 @@ tags:
       delete: dimsog.blog::lang.controllers.common.delete
 cards:
   label: dimsog.blog::lang.controllers.posts.cards
+  deferredBinding: true
   manage:
     list: $/dimsog/blog/models/postcard/columns.yaml
     form: $/dimsog/blog/models/postcard/fields.yaml

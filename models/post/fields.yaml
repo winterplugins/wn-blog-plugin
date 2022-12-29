@@ -34,8 +34,6 @@ tabs:
     fields:
         cards:
             tab: dimsog.blog::lang.models.post.fields.cards
-            context:
-                - update
             type: partial
             path: $/dimsog/blog/controllers/posts/_cards_relation.htm
         image:
