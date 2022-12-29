@@ -11,8 +11,24 @@
             <img src="{{ post.image.getThumb(700, 400, { 'mode': 'crop' }) }}" class="img-fluid" alt="{{ post.image.name }}" loading="lazy">
         </section>
         {% endif %}
-        <section class="post-item__text">
-            {{ post.text | raw }}
+        <section class="post-item-blocks">
+            {% for block in post.blocks %}
+                {% if block.type == 'text' %}
+                    <div class="post-item-blocks__text">
+                        {{ block.text | raw }}
+                    </div>
+                {% endif %}
+                {% if block.type == 'image' %}
+                    <div class="post-item-blocks__image">
+                        <img src="{{ block.image.getThumb(1280, 800) }}" alt="{{ block.image.title }}" class="img-fluid" loading="lazy">
+                    </div>
+                {% endif %}
+                {% if block.type == 'code' %}
+                    <div class="post-item-blocks__code">
+                        <pre><code>{{ block.code }}</code></pre>
+                    </div>
+                {% endif %}
+            {% endfor %}
         </section>
     </article>
 
