@@ -104,6 +104,13 @@ class Plugin extends PluginBase
                 'permissions' => ['*'],
                 'order'       => 500,
                 'sideMenu' => [
+                    'new_post' => [
+                        'label'       => 'dimsog.blog::lang.plugin.navigation.new_post',
+                        'url'         => Backend::url('dimsog/blog/posts/create'),
+                        'icon'        => ' icon-plus',
+                        'permissions' => ['*'],
+                        'order'       => 500
+                    ],
                     'posts' => [
                         'label'       => 'dimsog.blog::lang.plugin.navigation.posts',
                         'url'         => Backend::url('dimsog/blog/posts'),

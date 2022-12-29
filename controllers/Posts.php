@@ -38,4 +38,10 @@ class Posts extends Controller
 
         BackendMenu::setContext('Dimsog.Blog', 'blog', 'posts');
     }
+
+    public function create()
+    {
+        parent::create();
+        BackendMenu::setContext('Dimsog.Blog', 'blog', 'new_post');
+    }
 }

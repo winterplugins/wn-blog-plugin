@@ -5,6 +5,7 @@ return [
         'name' => 'Blog plugin',
         'description' => 'A simple blog plugin',
         'navigation' => [
+            'new_post' => 'New post',
             'blog' => 'Blog',
             'categories' => 'Categories',
             'posts' => 'Posts',
