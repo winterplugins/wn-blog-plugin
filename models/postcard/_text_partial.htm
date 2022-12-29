@@ -1,0 +1,11 @@
+<?php if ($record->type === 'text') { ?>
+<?= str_limit($record->text, 400); ?>
+<?php } ?>
+
+<?php if ($record->type === 'code') { ?>
+[code]
+<?php } ?>
+
+<?php if ($record->type === 'image') { ?>
+<img src="<?= $record->image->getThumb(250, 250); ?>" style="width: 250px; height: 250px" alt="">
+<?php } ?>

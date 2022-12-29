@@ -3,17 +3,7 @@
 # ===================================
 
 columns:
-    id:
-        label: 'dimsog.blog::lang.models.general.id'
-        searchable: true
-    created_at:
-        label: 'dimsog.blog::lang.models.general.created_at'
-        type: datetime
-        searchable: true
-        sortable: true
-        invisible: true
-    updated_at:
-        label: 'dimsog.blog::lang.models.general.updated_at'
-        type: datetime
-        searchable: true
-        sortable: true
+    text:
+        label: Cards
+        type: partial
+        path: $/dimsog/blog/models/postcard/_text_partial.htm
