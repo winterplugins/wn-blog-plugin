@@ -51,15 +51,6 @@ return [
                 'tag' => 'Tag',
             ],
         ],
-        'posttype' => [
-            'columns' => [
-                'id' => 'ID',
-                'name' => 'Name',
-            ],
-            'fields' => [
-                'name' => 'Name',
-            ],
-        ],
         'tag' => [
             'columns' => [
                 'id' => 'ID',
