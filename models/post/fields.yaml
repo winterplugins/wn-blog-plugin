@@ -18,17 +18,17 @@ fields:
             type: slug
         required: true
         span: auto
+    small_text:
+        tab: dimsog.blog::lang.models.post.fields.general
+        label: dimsog.blog::lang.models.post.fields.small_text
+        type: textarea
+        size: medium
 tabs:
     fields:
         cards:
             tab: dimsog.blog::lang.models.post.fields.cards
             type: partial
             path: $/dimsog/blog/controllers/posts/_cards_relation.htm
-        small_text:
-            tab: dimsog.blog::lang.models.post.fields.general
-            label: dimsog.blog::lang.models.post.fields.small_text
-            type: textarea
-            size: medium
         tags:
             tab: dimsog.blog::lang.models.post.fields.tags
             context:
