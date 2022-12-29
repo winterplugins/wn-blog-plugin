@@ -9,6 +9,7 @@ use Dimsog\Blog\Components\CategoriesList;
 use Dimsog\Blog\Components\PostsList;
 use Dimsog\Blog\Components\PostView;
 use Dimsog\Blog\Components\TagView;
+use Dimsog\Blog\Models\Settings;
 use System\Classes\PluginBase;
 
 /**
@@ -38,6 +39,22 @@ class Plugin extends PluginBase
             PostsList::class => 'postsList',
             PostView::class => 'postView',
             TagView::class => 'tagView'
+        ];
+    }
+
+    public function registerSettings(): array
+    {
+        return [
+            'comments' => [
+                'label' => 'dimsog.blog::lang.settings.name',
+                'description' => '',
+                'category' => 'dimsog.blog::lang.settings.name',
+                'icon' => 'icon-file-text-o',
+                'class' => Settings::class,
+                'order' => 500,
+                'keywords' => 'blog',
+                'permissions' => []
+            ]
         ];
     }
 

@@ -1,0 +1,15 @@
+fields:
+  name:
+    label: dimsog.blog::lang.settings.blog_name
+    default: A simple blog
+    required: true
+  description:
+    label: dimsog.blog::lang.settings.blog_description
+  poster:
+    label: dimsog.blog::lang.settings.poster
+    mode: image
+    type: fileupload
+    dependsOn: type
+    thumbOptions:
+      mode: crop
+      extension: auto

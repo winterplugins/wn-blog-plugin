@@ -12,6 +12,12 @@ return [
             'tags' => 'Tags'
         ],
     ],
+    'settings' => [
+        'name' => 'Blog',
+        'blog_name' => 'Blog name',
+        'blog_description' => 'Blog description',
+        'poster' => 'Poster'
+    ],
     'models' => [
         'category' => [
             'columns' => [
