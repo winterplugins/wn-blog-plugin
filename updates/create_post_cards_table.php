@@ -14,6 +14,7 @@ class CreatePostCardsTable extends Migration
             $table->unsignedInteger('post_id');
             $table->string('type');
             $table->longText('text')->nullable();
+            $table->longText('code')->nullable();
             $table->longText('images')->nullable();
 
             $table->foreign('post_id')

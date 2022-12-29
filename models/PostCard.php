@@ -1,6 +1,9 @@
 <?php namespace Dimsog\Blog\Models;
 
+use Backend\FormWidgets\CodeEditor;
+use Backend\FormWidgets\RichEditor;
 use Model;
+use System\Models\File;
 
 /**
  * PostCard Model
@@ -71,6 +74,37 @@ class PostCard extends Model
     public $morphTo = [];
     public $morphOne = [];
     public $morphMany = [];
-    public $attachOne = [];
+    public $attachOne = [
+        'image' => [File::class, 'delete' => true]
+    ];
     public $attachMany = [];
+
+
+    public function filterFields($fields)
+    {
+        $fields->text->hidden = true;
+        $fields->code->hidden = true;
+        $fields->image->hidden = true;
+
+        switch ($fields->type->value) {
+            case 'text':
+                $fields->text->hidden = false;
+                break;
+            case 'code':
+                $fields->code->hidden = false;
+                break;
+            case 'image':
+                $fields->image->hidden = false;
+                break;
+        }
+    }
+
+    public function getTypeOptions(): array
+    {
+        return [
+            'text' => 'Text',
+            'code' => 'Code',
+            'image' => 'Image'
+        ];
+    }
 }
