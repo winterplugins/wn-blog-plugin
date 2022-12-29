@@ -64,7 +64,8 @@ class Post extends Model
      */
     public $hasOne = [];
     public $hasMany = [
-        'tags' => [PostTag::class]
+        'tags' => [PostTag::class],
+        'cards' => [PostCard::class],
     ];
     public $hasOneThrough = [];
     public $hasManyThrough = [];

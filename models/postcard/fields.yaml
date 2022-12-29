@@ -3,6 +3,10 @@
 # ===================================
 
 fields:
-    id:
-        label: 'dimsog.blog::lang.models.general.id'
-        disabled: true
+    type:
+        label: Type
+        type: dropdown
+        options:
+            - Text
+            - Image
+            - Code

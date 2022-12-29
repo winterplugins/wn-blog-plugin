@@ -41,6 +41,7 @@ return [
                 'text' => 'Text',
                 'tags' => 'Tags',
                 'general' => 'General',
+                'cards' => 'Cards'
             ],
         ],
         'posttag' => [
@@ -99,6 +100,7 @@ return [
         'posts' => [
             'name' => 'Posts',
             'tags' => 'Tags',
+            'cards' => 'Cards'
         ],
         'posttypes' => [
             'name' => 'Post types',

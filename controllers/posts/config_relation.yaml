@@ -8,3 +8,13 @@ tags:
     toolbarButtons:
       create: dimsog.blog::lang.controllers.common.create
       delete: dimsog.blog::lang.controllers.common.delete
+cards:
+  label: dimsog.blog::lang.controllers.posts.cards
+  manage:
+    list: $/dimsog/blog/models/postcard/columns.yaml
+    form: $/dimsog/blog/models/postcard/fields.yaml
+  view:
+    list: $/dimsog/blog/models/postcard/columns.yaml
+    toolbarButtons:
+      create: dimsog.blog::lang.controllers.common.create
+      delete: dimsog.blog::lang.controllers.common.delete
