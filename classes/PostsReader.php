@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Dimsog\Blog\Classes;
 
 use Dimsog\Blog\Models\Post;

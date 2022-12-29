@@ -1,4 +1,8 @@
-<?php namespace Dimsog\Blog\Components;
+<?php
+
+declare(strict_types=1);
+
+namespace Dimsog\Blog\Components;
 
 use Cms\Classes\ComponentBase;
 use Dimsog\Blog\Models\Post;
