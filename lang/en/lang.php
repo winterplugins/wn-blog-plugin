@@ -34,7 +34,7 @@ return [
                 'category' => 'Category',
                 'name' => 'Name',
                 'slug' => 'Slug',
-                'type' => 'Post type',
+                'type' => 'Type',
                 'image' => 'Image',
                 'small_text' => 'Description',
                 'text' => 'Text',
