@@ -104,17 +104,17 @@ class Plugin extends PluginBase
                 'permissions' => ['*'],
                 'order'       => 500,
                 'sideMenu' => [
-                    'categories' => [
-                        'label'       => 'dimsog.blog::lang.plugin.navigation.categories',
-                        'url'         => Backend::url('dimsog/blog/categories'),
-                        'icon'        => 'icon-list-ul',
-                        'permissions' => ['*'],
-                        'order'       => 500
-                    ],
                     'posts' => [
                         'label'       => 'dimsog.blog::lang.plugin.navigation.posts',
                         'url'         => Backend::url('dimsog/blog/posts'),
                         'icon'        => 'icon-file-text-o',
+                        'permissions' => ['*'],
+                        'order'       => 500
+                    ],
+                    'categories' => [
+                        'label'       => 'dimsog.blog::lang.plugin.navigation.categories',
+                        'url'         => Backend::url('dimsog/blog/categories'),
+                        'icon'        => 'icon-list-ul',
                         'permissions' => ['*'],
                         'order'       => 500
                     ],
