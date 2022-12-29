@@ -4,9 +4,9 @@
 
 columns:
     text:
-        label: Cards
+        label: Blocks
         type: partial
-        path: $/dimsog/blog/models/postcard/_text_partial.htm
+        path: $/dimsog/blog/models/postblock/_text_partial.htm
     position:
         label: Position
         width: 100px

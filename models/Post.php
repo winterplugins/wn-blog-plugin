@@ -65,7 +65,7 @@ class Post extends Model
     public $hasOne = [];
     public $hasMany = [
         'tags' => [PostTag::class],
-        'cards' => [PostCard::class],
+        'blocks' => [PostBlock::class],
     ];
     public $hasOneThrough = [];
     public $hasManyThrough = [];
@@ -105,8 +105,8 @@ class Post extends Model
             ->first();
     }
 
-    public function maxCardPosition(): int
+    public function maxBlocksPosition(): int
     {
-        return $this->cards->max('position');
+        return $this->blocks->max('position');
     }
 }

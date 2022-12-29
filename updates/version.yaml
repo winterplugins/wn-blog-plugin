@@ -15,6 +15,6 @@
     - 'Remove crop mode from preview'
     - 'Add image to status'
 1.0.4:
-    - create_post_cards_table.php
+    - create_post_blocks_table.php
     - change_post_tags_table.php
-    - 'Add: a post cards'
+    - 'Add: a post blocks'

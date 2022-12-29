@@ -9,14 +9,14 @@ tags:
     toolbarButtons:
       create: dimsog.blog::lang.controllers.common.create
       delete: dimsog.blog::lang.controllers.common.delete
-cards:
-  label: dimsog.blog::lang.controllers.posts.cards
+blocks:
+  label: dimsog.blog::lang.controllers.posts.blocks
   deferredBinding: true
   manage:
-    list: $/dimsog/blog/models/postcard/columns.yaml
-    form: $/dimsog/blog/models/postcard/fields.yaml
+    list: $/dimsog/blog/models/postblock/columns.yaml
+    form: $/dimsog/blog/models/postblock/fields.yaml
   view:
-    list: $/dimsog/blog/models/postcard/columns.yaml
+    list: $/dimsog/blog/models/postblock/columns.yaml
     defaultSort:
       column: position
       direction: asc

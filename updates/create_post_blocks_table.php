@@ -4,11 +4,11 @@ use Schema;
 use Winter\Storm\Database\Schema\Blueprint;
 use Winter\Storm\Database\Updates\Migration;
 
-class CreatePostCardsTable extends Migration
+class CreatePostBlocksTable extends Migration
 {
     public function up()
     {
-        Schema::create('dimsog_blog_post_cards', function (Blueprint $table) {
+        Schema::create('dimsog_blog_post_blocks', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->unsignedInteger('post_id')->nullable();
@@ -28,6 +28,6 @@ class CreatePostCardsTable extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('dimsog_blog_post_cards');
+        Schema::dropIfExists('dimsog_blog_post_blocks');
     }
 }

@@ -21,10 +21,10 @@ fields:
         size: medium
 tabs:
     fields:
-        cards:
-            tab: dimsog.blog::lang.models.post.fields.cards
+        blocks:
+            tab: dimsog.blog::lang.models.post.fields.blocks
             type: partial
-            path: $/dimsog/blog/controllers/posts/_cards_relation.htm
+            path: $/dimsog/blog/controllers/posts/_blocks_relation.htm
 secondaryTabs:
     fields:
         active:
