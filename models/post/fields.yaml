@@ -52,11 +52,6 @@ tabs:
             label: dimsog.blog::lang.models.post.fields.small_text
             type: textarea
             size: medium
-        text:
-            tab: dimsog.blog::lang.models.post.fields.general
-            label: dimsog.blog::lang.models.post.fields.text
-            type: richeditor
-            size: giant
         tags:
             tab: dimsog.blog::lang.models.post.fields.tags
             context:
