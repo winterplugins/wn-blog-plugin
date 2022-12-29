@@ -37,7 +37,7 @@ return [
                 'type' => 'Post type',
                 'active' => 'Active',
                 'image' => 'Image',
-                'small_text' => 'Small text',
+                'small_text' => 'Description',
                 'text' => 'Text',
                 'tags' => 'Tags',
                 'general' => 'General',
