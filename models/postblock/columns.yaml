@@ -6,7 +6,7 @@ columns:
     text:
         label: Blocks
         type: partial
-        path: $/dimsog/blog/models/postblock/_text_partial.htm
+        path: $/dimsog/blog/models/postblock/partials/_text.htm
     position:
         label: Position
         width: 100px
