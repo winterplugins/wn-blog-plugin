@@ -17,4 +17,5 @@
 1.0.4:
     - create_post_blocks_table.php
     - change_post_tags_table.php
+    - move_text_to_blocks.php
     - 'Add: a post blocks'
