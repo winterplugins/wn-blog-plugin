@@ -6,6 +6,7 @@ columns:
     id:
         label: dimsog.blog::lang.models.category.columns.id
         searchable: true
+        width: '100px'
     name:
         label: dimsog.blog::lang.models.category.columns.name
         searchable: true
