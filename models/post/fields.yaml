@@ -29,12 +29,6 @@ tabs:
             tab: dimsog.blog::lang.models.post.fields.cards
             type: partial
             path: $/dimsog/blog/controllers/posts/_cards_relation.htm
-        tags:
-            tab: dimsog.blog::lang.models.post.fields.tags
-            context:
-                - update
-            type: partial
-            path: $/dimsog/blog/controllers/posts/_tags_relation.htm
 secondaryTabs:
     fields:
         image:
@@ -54,3 +48,7 @@ secondaryTabs:
             showSearch: true
             required: 1
             type: dropdown
+        tags:
+            label: dimsog.blog::lang.models.post.fields.tags
+            type: partial
+            path: $/dimsog/blog/controllers/posts/_tags_relation.htm
