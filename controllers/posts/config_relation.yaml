@@ -1,5 +1,6 @@
 tags:
   label: dimsog.blog::lang.controllers.posts.tags
+  deferredBinding: true
   manage:
     list: $/dimsog/blog/models/posttag/columns.yaml
     form: $/dimsog/blog/models/posttag/fields.yaml
