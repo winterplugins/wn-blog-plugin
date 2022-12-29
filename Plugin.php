@@ -1,4 +1,6 @@
-<?php namespace Dimsog\Blog;
+<?php
+
+namespace Dimsog\Blog;
 
 use Backend;
 use Dimsog\Blog\Components\CategoriesList;
@@ -17,7 +19,7 @@ class Plugin extends PluginBase
      *
      * @return array
      */
-    public function pluginDetails()
+    public function pluginDetails(): array
     {
         return [
             'name'        => 'dimsog.blog::lang.plugin.name',
@@ -57,7 +59,7 @@ class Plugin extends PluginBase
      *
      * @return array
      */
-    public function registerNavigation()
+    public function registerNavigation(): array
     {
         return [
             'blog' => [
