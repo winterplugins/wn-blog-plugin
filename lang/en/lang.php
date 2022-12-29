@@ -90,7 +90,6 @@ return [
             'delete_confirm' => 'Are your sure?',
             'deleting' => 'Deleting...',
             'back' => 'Back',
-            'save' => 'Save',
             'saving' => 'Saving...',
             'save_and_close' => 'Save and close',
         ],

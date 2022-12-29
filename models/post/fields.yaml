@@ -18,33 +18,12 @@ fields:
             type: slug
         required: true
         span: auto
-    category_id:
-        label: dimsog.blog::lang.models.post.fields.category
-        showSearch: true
-        required: 1
-        span: auto
-        type: dropdown
-    type_id:
-        label: dimsog.blog::lang.models.post.fields.type
-        showSearch: true
-        required: 1
-        span: auto
-        type: dropdown
 tabs:
     fields:
         cards:
             tab: dimsog.blog::lang.models.post.fields.cards
             type: partial
             path: $/dimsog/blog/controllers/posts/_cards_relation.htm
-        image:
-            label: dimsog.blog::lang.models.post.fields.image
-            mode: image
-            span: auto
-            type: fileupload
-            tab: dimsog.blog::lang.models.post.fields.general
-            thumbOptions:
-                mode: crop
-                extension: auto
         small_text:
             tab: dimsog.blog::lang.models.post.fields.general
             label: dimsog.blog::lang.models.post.fields.small_text
@@ -56,3 +35,22 @@ tabs:
                 - update
             type: partial
             path: $/dimsog/blog/controllers/posts/_tags_relation.htm
+secondaryTabs:
+    fields:
+        image:
+            label: dimsog.blog::lang.models.post.fields.image
+            mode: image
+            type: fileupload
+            thumbOptions:
+                mode: crop
+                extension: auto
+        category_id:
+            label: dimsog.blog::lang.models.post.fields.category
+            showSearch: true
+            required: 1
+            type: dropdown
+        type_id:
+            label: dimsog.blog::lang.models.post.fields.type
+            showSearch: true
+            required: 1
+            type: dropdown

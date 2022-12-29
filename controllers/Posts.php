@@ -29,6 +29,8 @@ class Posts extends Controller
 
     public $relationConfig = 'config_relation.yaml';
 
+    public $bodyClass = 'compact-container';
+
 
     public function __construct()
     {
