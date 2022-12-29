@@ -29,6 +29,7 @@ return [
                 'id' => 'ID',
                 'category' => 'Category',
                 'name' => 'Name',
+                'active' => 'Active'
             ],
             'fields' => [
                 'category' => 'Category',

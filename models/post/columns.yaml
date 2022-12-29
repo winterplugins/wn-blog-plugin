@@ -15,3 +15,7 @@ columns:
     name:
         label: dimsog.blog::lang.models.post.columns.name
         searchable: true
+    active:
+        type: partial
+        path: ~/plugins/dimsog/blog/models/post/partials/_active.htm
+        label: dimsog.blog::lang.models.post.columns.active
