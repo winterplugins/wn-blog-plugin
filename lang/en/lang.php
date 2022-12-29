@@ -36,7 +36,6 @@ return [
                 'name' => 'Name',
                 'slug' => 'Slug',
                 'type' => 'Post type',
-                'active' => 'Active',
                 'image' => 'Image',
                 'small_text' => 'Description',
                 'text' => 'Text',

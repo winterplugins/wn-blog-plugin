@@ -29,7 +29,6 @@ secondaryTabs:
     fields:
         active:
             type: switch
-            label: dimsog.blog::lang.models.post.fields.active
             default: true
         image:
             label: dimsog.blog::lang.models.post.fields.image
