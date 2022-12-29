@@ -7,3 +7,6 @@ columns:
         label: Cards
         type: partial
         path: $/dimsog/blog/models/postcard/_text_partial.htm
+    position:
+        label: Position
+        width: 100px

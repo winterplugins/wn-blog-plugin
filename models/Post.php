@@ -104,4 +104,9 @@ class Post extends Model
             ->where('active', 1)
             ->first();
     }
+
+    public function maxCardPosition(): int
+    {
+        return $this->cards->max('position');
+    }
 }

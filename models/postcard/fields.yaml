@@ -26,3 +26,8 @@ fields:
         thumbOptions:
             mode: crop
             extension: auto
+    position:
+        label: Position
+        context:
+            - update
+        required: true

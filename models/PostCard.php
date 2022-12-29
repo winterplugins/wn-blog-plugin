@@ -1,7 +1,11 @@
-<?php namespace Dimsog\Blog\Models;
+<?php
+namespace Dimsog\Blog\Models;
 
 use Model;
 use System\Models\File;
+use Winter\Storm\Database\Models\DeferredBinding as DeferredBindingModel;
+use Winter\Storm\Database\SortableScope;
+use Winter\Storm\Database\Traits\Sortable;
 
 /**
  * PostCard Model
@@ -9,6 +13,9 @@ use System\Models\File;
 class PostCard extends Model
 {
     use \Winter\Storm\Database\Traits\Validation;
+    use Sortable;
+
+    const SORT_ORDER = 'position';
 
     /**
      * @var string The database table used by the model.
@@ -67,7 +74,9 @@ class PostCard extends Model
     public $hasMany = [];
     public $hasOneThrough = [];
     public $hasManyThrough = [];
-    public $belongsTo = [];
+    public $belongsTo = [
+        'post' => [Post::class]
+    ];
     public $belongsToMany = [];
     public $morphTo = [];
     public $morphOne = [];
@@ -77,6 +86,38 @@ class PostCard extends Model
     ];
     public $attachMany = [];
 
+
+    public static function bootSortable()
+    {
+        static::created(static function (PostCard $model): void {
+            if (!empty($model->position)) {
+                return;
+            }
+            if (empty($model->post)) {
+                $count = 0;
+                $binding = new DeferredBindingModel;
+                $binding->setConnection($model->getConnectionName());
+                $cardIds = $binding
+                        ->where('master_type', Post::class)
+                        ->where('master_field', 'cards')
+                        ->where('session_key', post('_relation_session_key'))
+                        ->pluck('slave_id');
+
+                if (!$cardIds->isEmpty()) {
+                    $count = PostCard::whereIn('id', $cardIds)->max('position');
+                }
+                static::updatePosition($model->id, $count + 1);
+            } else {
+                static::updatePosition($model->id, $model->post->maxCardPosition() + 1);
+            }
+        });
+        static::addGlobalScope(new SortableScope);
+    }
+
+    public static function updatePosition(int $id, int $newPosition): void
+    {
+        PostCard::where('id', $id)->update(['position' => $newPosition]);
+    }
 
     public function filterFields($fields)
     {

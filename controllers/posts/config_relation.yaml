@@ -16,6 +16,9 @@ cards:
     form: $/dimsog/blog/models/postcard/fields.yaml
   view:
     list: $/dimsog/blog/models/postcard/columns.yaml
+    defaultSort:
+      column: position
+      direction: asc
     toolbarButtons:
       create: dimsog.blog::lang.controllers.common.create
       delete: dimsog.blog::lang.controllers.common.delete
