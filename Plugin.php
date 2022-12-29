@@ -140,7 +140,7 @@ class Plugin extends PluginBase
                         'order'       => 500
                     ]
                 ]
-            ],
+            ]
         ];
     }
 }
