@@ -3,3 +3,9 @@ A simple blog plugin for WinterCMS
 
 ![image](https://user-images.githubusercontent.com/904958/209973269-583281e3-1e5f-4225-bfdb-7fe550520d2a.png)
 ![image](https://user-images.githubusercontent.com/904958/209974297-6961c24f-bf8e-4577-8c57-bc08d6c3f174.png)
+
+### Supported versions
+Please check: https://www.php.net/supported-versions.php
+* PHP 8.0
+* PHP 8.1
+* PHP 8.2
