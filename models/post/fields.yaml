@@ -3,6 +3,10 @@
 # ===================================
 
 fields:
+    active:
+        type: switch
+        label: dimsog.blog::lang.models.post.fields.active
+        default: true
     name:
         label: dimsog.blog::lang.models.post.fields.name
         required: true
@@ -26,10 +30,6 @@ fields:
         required: 1
         span: auto
         type: dropdown
-    active:
-        type: switch
-        label: dimsog.blog::lang.models.post.fields.active
-        default: true
 tabs:
     fields:
         cards:
