@@ -91,11 +91,6 @@ class Post extends Model
         return Category::lists('name', 'id');
     }
 
-    public function getTypeIdOptions(): array
-    {
-        return PostType::lists('name', 'id');
-    }
-
     public function updateViews(): void
     {
         static::where('id', $this->id)
@@ -112,5 +107,13 @@ class Post extends Model
     public function maxBlocksPosition(): int
     {
         return $this->blocks->max('position');
+    }
+
+    public function getTypeOptions(): array
+    {
+        return [
+            'post' => 'Post',
+            'status' => 'Status'
+        ];
     }
 }

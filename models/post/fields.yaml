@@ -42,7 +42,7 @@ secondaryTabs:
             showSearch: true
             required: 1
             type: dropdown
-        type_id:
+        type:
             label: dimsog.blog::lang.models.post.fields.type
             showSearch: true
             required: 1

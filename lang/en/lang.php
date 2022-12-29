@@ -9,8 +9,7 @@ return [
             'blog' => 'Blog',
             'categories' => 'Categories',
             'posts' => 'Posts',
-            'tags' => 'Tags',
-            'posttypes' => 'Post types',
+            'tags' => 'Tags'
         ],
     ],
     'models' => [
@@ -93,9 +92,6 @@ return [
             'name' => 'Posts',
             'tags' => 'Tags',
             'blocks' => 'Blocks'
-        ],
-        'posttypes' => [
-            'name' => 'Post types',
         ],
         'tags' => [
             'name' => 'Tags',

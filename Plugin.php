@@ -98,13 +98,6 @@ class Plugin extends PluginBase
                         'icon'        => 'icon-link',
                         'permissions' => ['*'],
                         'order'       => 500
-                    ],
-                    'posttypes' => [
-                        'label'       => 'dimsog.blog::lang.plugin.navigation.posttypes',
-                        'url'         => Backend::url('dimsog/blog/posttypes'),
-                        'icon'        => 'icon-list-ul',
-                        'permissions' => ['*'],
-                        'order'       => 500
                     ]
                 ]
             ]
