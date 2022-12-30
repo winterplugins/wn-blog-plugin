@@ -19,12 +19,14 @@ fields:
         label: dimsog.blog::lang.models.post.fields.small_text
         type: textarea
         size: medium
+        dependsOn: type
 tabs:
     fields:
         blocks:
             tab: dimsog.blog::lang.models.post.fields.blocks
             type: partial
             path: $/dimsog/blog/controllers/posts/_blocks_relation.htm
+            dependsOn: type
 secondaryTabs:
     fields:
         active:
@@ -34,6 +36,7 @@ secondaryTabs:
             label: dimsog.blog::lang.models.post.fields.image
             mode: image
             type: fileupload
+            dependsOn: type
             thumbOptions:
                 mode: crop
                 extension: auto
@@ -51,3 +54,4 @@ secondaryTabs:
             label: dimsog.blog::lang.models.post.fields.tags
             type: partial
             path: $/dimsog/blog/controllers/posts/_tags_relation.htm
+            dependsOn: type

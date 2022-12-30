@@ -116,4 +116,22 @@ class Post extends Model
             'status' => 'Status'
         ];
     }
+
+    public function filterFields($fields)
+    {
+        switch ($fields->type->value) {
+            case 'post':
+                $fields->small_text->hidden = false;
+                $fields->blocks->hidden = false;
+                $fields->image->hidden = false;
+                $fields->tags->hidden = false;
+                break;
+            case 'status':
+                $fields->small_text->hidden = true;
+                $fields->blocks->hidden = true;
+                $fields->image->hidden = true;
+                $fields->tags->hidden = true;
+                break;
+        }
+    }
 }
