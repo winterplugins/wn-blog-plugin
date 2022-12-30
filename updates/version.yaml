@@ -18,4 +18,6 @@
     - change_post_tags_table.php
     - move_text_to_blocks.php
     - remove_post_types_table.php
-    - 'Add: a post blocks'
+    - 'New: a post blocks'
+    - 'New: minor code improvements'
+    - 'Removed: post_types table'
