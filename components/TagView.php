@@ -8,12 +8,13 @@ use Cms\Classes\ComponentBase;
 use Dimsog\Blog\Classes\PostsReader;
 use Dimsog\Blog\Models\Tag;
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 class TagView extends ComponentBase
 {
     private Tag $tag;
 
-    private Collection $posts;
+    private LengthAwarePaginator $posts;
 
 
     public function onRun()
