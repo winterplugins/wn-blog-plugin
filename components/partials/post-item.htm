@@ -20,8 +20,5 @@
     </section>
     {% else %}
         {{ post.name }}
-        <section class="post-item__image">
-            <img src="{{ post.image.getThumb(700, 400) }}" class="img-fluid" alt="{{ post.image.name }}" loading="lazy">
-        </section>
     {% endif %}
 </article>
