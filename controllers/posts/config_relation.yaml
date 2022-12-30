@@ -1,10 +1,25 @@
 tags:
   label: dimsog.blog::lang.controllers.posts.tags
+  deferredBinding: true
   manage:
     list: $/dimsog/blog/models/posttag/columns.yaml
     form: $/dimsog/blog/models/posttag/fields.yaml
   view:
     list: $/dimsog/blog/models/posttag/columns.yaml
+    toolbarButtons:
+      create: dimsog.blog::lang.controllers.common.create
+      delete: dimsog.blog::lang.controllers.common.delete
+blocks:
+  label: dimsog.blog::lang.controllers.posts.blocks
+  deferredBinding: true
+  manage:
+    list: $/dimsog/blog/models/postblock/columns.yaml
+    form: $/dimsog/blog/models/postblock/fields.yaml
+  view:
+    list: $/dimsog/blog/models/postblock/columns.yaml
+    defaultSort:
+      column: position
+      direction: asc
     toolbarButtons:
       create: dimsog.blog::lang.controllers.common.create
       delete: dimsog.blog::lang.controllers.common.delete

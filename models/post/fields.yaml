@@ -14,46 +14,44 @@ fields:
             type: slug
         required: true
         span: auto
-    category_id:
-        label: dimsog.blog::lang.models.post.fields.category
-        showSearch: true
-        required: 1
-        span: auto
-        type: dropdown
-    type_id:
-        label: dimsog.blog::lang.models.post.fields.type
-        showSearch: true
-        required: 1
-        span: auto
-        type: dropdown
-    active:
-        type: switch
-        label: dimsog.blog::lang.models.post.fields.active
-        default: true
+    small_text:
+        tab: dimsog.blog::lang.models.post.fields.general
+        label: dimsog.blog::lang.models.post.fields.small_text
+        type: textarea
+        size: medium
+        dependsOn: type
 tabs:
     fields:
+        blocks:
+            tab: dimsog.blog::lang.models.post.fields.blocks
+            type: partial
+            path: $/dimsog/blog/controllers/posts/_blocks_relation.htm
+            dependsOn: type
+secondaryTabs:
+    fields:
+        active:
+            type: switch
+            default: true
         image:
             label: dimsog.blog::lang.models.post.fields.image
             mode: image
-            span: auto
             type: fileupload
-            tab: dimsog.blog::lang.models.post.fields.general
+            dependsOn: type
             thumbOptions:
                 mode: crop
                 extension: auto
-        small_text:
-            tab: dimsog.blog::lang.models.post.fields.general
-            label: dimsog.blog::lang.models.post.fields.small_text
-            type: textarea
-            size: medium
-        text:
-            tab: dimsog.blog::lang.models.post.fields.general
-            label: dimsog.blog::lang.models.post.fields.text
-            type: richeditor
-            size: giant
+        category_id:
+            label: dimsog.blog::lang.models.post.fields.category
+            showSearch: true
+            required: 1
+            type: dropdown
+        type:
+            label: dimsog.blog::lang.models.post.fields.type
+            showSearch: true
+            required: 1
+            type: dropdown
         tags:
-            tab: dimsog.blog::lang.models.post.fields.tags
-            context:
-                - update
+            label: dimsog.blog::lang.models.post.fields.tags
             type: partial
             path: $/dimsog/blog/controllers/posts/_tags_relation.htm
+            dependsOn: type

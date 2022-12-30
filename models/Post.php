@@ -1,4 +1,8 @@
-<?php namespace Dimsog\Blog\Models;
+<?php
+
+declare(strict_types=1);
+
+namespace Dimsog\Blog\Models;
 
 use Illuminate\Database\Eloquent\Collection;
 use Model;
@@ -64,7 +68,8 @@ class Post extends Model
      */
     public $hasOne = [];
     public $hasMany = [
-        'tags' => [PostTag::class]
+        'tags' => [PostTag::class],
+        'blocks' => [PostBlock::class],
     ];
     public $hasOneThrough = [];
     public $hasManyThrough = [];
@@ -86,11 +91,6 @@ class Post extends Model
         return Category::lists('name', 'id');
     }
 
-    public function getTypeIdOptions(): array
-    {
-        return PostType::lists('name', 'id');
-    }
-
     public function updateViews(): void
     {
         static::where('id', $this->id)
@@ -102,5 +102,36 @@ class Post extends Model
         return static::where('slug', $slug)
             ->where('active', 1)
             ->first();
+    }
+
+    public function maxBlocksPosition(): int
+    {
+        return $this->blocks->max('position');
+    }
+
+    public function getTypeOptions(): array
+    {
+        return [
+            'post' => 'Post',
+            'status' => 'Status'
+        ];
+    }
+
+    public function filterFields($fields)
+    {
+        switch ($fields->type->value) {
+            case 'post':
+                $fields->small_text->hidden = false;
+                $fields->blocks->hidden = false;
+                $fields->image->hidden = false;
+                $fields->tags->hidden = false;
+                break;
+            case 'status':
+                $fields->small_text->hidden = true;
+                $fields->blocks->hidden = true;
+                $fields->image->hidden = true;
+                $fields->tags->hidden = true;
+                break;
+        }
     }
 }

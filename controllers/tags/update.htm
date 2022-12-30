@@ -18,20 +18,22 @@
                 <button
                     type="submit"
                     data-request="onSave"
+                    data-browser-validate
                     data-request-data="redirect:0"
                     data-hotkey="ctrl+s, cmd+s"
-                    data-load-indicator="<?= e(trans('dimsog.blog::lang.controllers.common.saving')) ?>"
+                    data-load-indicator="<?= e(trans('backend::lang.form.saving')) ?>"
                     class="btn btn-primary">
-                    <?= e(trans('dimsog.blog::lang.controllers.common.save')) ?>
+                    <?= e(trans('backend::lang.form.save')) ?>
                 </button>
                 <button
                     type="button"
                     data-request="onSave"
+                    data-browser-validate
                     data-request-data="close:1"
                     data-hotkey="ctrl+enter, cmd+enter"
-                    data-load-indicator="<?= e(trans('dimsog.blog::lang.controllers.common.saving')) ?>"
+                    data-load-indicator="<?= e(trans('backend::lang.form.saving')) ?>"
                     class="btn btn-default">
-                    <?= e(trans('dimsog.blog::lang.controllers.common.save_and_close')) ?>
+                    <?= e(trans('backend::lang.form.save_and_close')) ?>
                 </button>
                 <button
                     type="button"
@@ -41,8 +43,8 @@
                     data-request-confirm="<?= e(trans('dimsog.blog::lang.controllers.common.delete_confirm')) ?>">
                 </button>
                 <span class="btn-text">
-                    <?= e(trans('dimsog.blog::lang.controllers.common.or')) ?> <a href="<?= Backend::url('dimsog/blog/tags') ?>">
-                    <?= e(trans('dimsog.blog::lang.controllers.common.close')) ?>
+                    <?= e(trans('backend::lang.form.or')) ?> <a href="<?= Backend::url('dimsog/blog/tags') ?>">
+                    <?= e(trans('backend::lang.form.cancel')) ?>
                 </a>
                 </span>
             </div>

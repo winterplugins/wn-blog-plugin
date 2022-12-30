@@ -29,11 +29,19 @@ class Posts extends Controller
 
     public $relationConfig = 'config_relation.yaml';
 
+    public $bodyClass = 'compact-container';
+
 
     public function __construct()
     {
         parent::__construct();
 
         BackendMenu::setContext('Dimsog.Blog', 'blog', 'posts');
+    }
+
+    public function create()
+    {
+        parent::create();
+        BackendMenu::setContext('Dimsog.Blog', 'blog', 'new_post');
     }
 }

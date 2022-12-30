@@ -1,4 +1,8 @@
-<?php namespace Dimsog\Blog\Models;
+<?php
+
+declare(strict_types=1);
+
+namespace Dimsog\Blog\Models;
 
 use Model;
 use Winter\Storm\Database\Traits\Sluggable;

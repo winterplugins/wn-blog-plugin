@@ -5,11 +5,29 @@ return [
         'name' => 'Blog plugin',
         'description' => 'A simple blog plugin',
         'navigation' => [
+            'new_post' => 'New post',
             'blog' => 'Blog',
             'categories' => 'Categories',
             'posts' => 'Posts',
-            'tags' => 'Tags',
-            'posttypes' => 'Post types'
+            'tags' => 'Tags'
+        ],
+    ],
+    'settings' => [
+        'name' => 'Blog',
+        'blog_name' => 'Blog name',
+        'blog_description' => 'Blog description',
+        'poster' => 'Poster',
+        'blog_name_color' => 'Blog name color',
+        'description_color' => 'Description color',
+        'menu_color' => 'Menu color',
+        'menu_color_hover' => 'Menu color (hover)',
+        'menu_color_active' => 'Menu color (active)',
+        'main_page_meta_title' => 'Main page title',
+        'main_page_meta_description' => 'Main page meta description',
+        'tabs' => [
+            'general' => 'General',
+            'colors' => 'Colors',
+            'seo' => 'Seo'
         ]
     ],
     'models' => [
@@ -17,89 +35,76 @@ return [
             'columns' => [
                 'id' => 'id',
                 'name' => 'Name',
-                'count' => 'Posts'
+                'count' => 'Posts',
             ],
             'fields' => [
                 'name' => 'Name',
-                'slug' => 'Slug'
-            ]
+                'slug' => 'Slug',
+            ],
         ],
         'post' => [
             'columns' => [
                 'id' => 'ID',
                 'category' => 'Category',
-                'name' => 'Name'
+                'name' => 'Name',
+                'active' => 'Active'
             ],
             'fields' => [
                 'category' => 'Category',
                 'name' => 'Name',
                 'slug' => 'Slug',
-                'type' => 'Post type',
-                'active' => 'Active',
+                'type' => 'Type',
                 'image' => 'Image',
-                'small_text' => 'Small text',
+                'small_text' => 'Description',
                 'text' => 'Text',
                 'tags' => 'Tags',
-                'general' => 'General'
-            ]
+                'general' => 'General',
+                'blocks' => 'Blocks'
+            ],
         ],
         'posttag' => [
             'columns' => [
-                'tag' => 'Tag'
+                'tag' => 'Tag',
             ],
             'fields' => [
-                'tag' => 'Tag'
-            ]
-        ],
-        'posttype' => [
-            'columns' => [
-                'id' => 'ID',
-                'name' => 'Name'
+                'tag' => 'Tag',
             ],
-            'fields' => [
-                'name' => 'Name'
-            ]
         ],
         'tag' => [
             'columns' => [
                 'id' => 'ID',
-                'name' => 'Name'
+                'name' => 'Name',
             ],
             'fields' => [
                 'name' => 'Name',
-                'slug' => 'Slug'
-            ]
-        ]
+                'slug' => 'Slug',
+            ],
+        ],
+        'general' => [
+            'id' => 'ID',
+            'created_at' => 'Created At',
+            'updated_at' => 'Updated At',
+        ],
     ],
     'controllers' => [
         'common' => [
             'create' => 'Create',
-            'creating' => 'Creating...',
-            'create_and_close' => 'Create and close',
             'update' => 'Update',
-            'or' => 'or',
-            'close' => 'Close',
             'delete_selected' => 'Delete selected',
             'delete' => 'Delete',
             'delete_confirm' => 'Are your sure?',
             'deleting' => 'Deleting...',
-            'back' => 'Back',
-            'save' => 'Save',
-            'saving' => 'Saving...',
-            'save_and_close' => 'Save and close'
         ],
         'categories' => [
-            'name' => 'Categories'
+            'name' => 'Categories',
         ],
         'posts' => [
             'name' => 'Posts',
-            'tags' => 'Tags'
-        ],
-        'posttypes' => [
-            'name' => 'Post types'
+            'tags' => 'Tags',
+            'blocks' => 'Blocks'
         ],
         'tags' => [
-            'name' => 'Tags'
-        ]
-    ]
+            'name' => 'Tags',
+        ],
+    ],
 ];

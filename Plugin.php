@@ -1,10 +1,16 @@
-<?php namespace Dimsog\Blog;
+<?php
+
+declare(strict_types=1);
+
+namespace Dimsog\Blog;
 
 use Backend;
+use Cms\Classes\Page;
 use Dimsog\Blog\Components\CategoriesList;
 use Dimsog\Blog\Components\PostsList;
 use Dimsog\Blog\Components\PostView;
 use Dimsog\Blog\Components\TagView;
+use Dimsog\Blog\Models\Settings;
 use System\Classes\PluginBase;
 
 /**
@@ -17,7 +23,7 @@ class Plugin extends PluginBase
      *
      * @return array
      */
-    public function pluginDetails()
+    public function pluginDetails(): array
     {
         return [
             'name'        => 'dimsog.blog::lang.plugin.name',
@@ -27,24 +33,24 @@ class Plugin extends PluginBase
         ];
     }
 
-    /**
-     * Register method, called when the plugin is first registered.
-     *
-     * @return void
-     */
-    public function register()
+    public function boot(): void
     {
+        Page::extend(static function (Page $page): void {
+            /** @var Settings $settings */
+            $settings = Settings::instance();
 
-    }
-
-    /**
-     * Boot method, called right before the request route.
-     *
-     * @return array
-     */
-    public function boot()
-    {
-
+            $page['blog_meta_title'] = $settings->getMainPageMetaTitle();
+            $page['blog_meta_description'] = $settings->getBlogDescription();
+            $page['blog_name'] = $settings->getBlogName();
+            $page['blog_description'] = $settings->getBlogDescription();
+            $page['blog_poster'] = $settings->getBlogPoster();
+            $page['blog_main_page_meta_title'] = $settings->getMainPageMetaTitle();
+            $page['blog_name_color'] = $settings->getBlogNameColor();
+            $page['blog_description_color'] = $settings->getDescriptionColor();
+            $page['blog_menu_color'] = $settings->getMenuColor();
+            $page['blog_menu_color_hover'] = $settings->getMenuColorHover();
+            $page['blog_menu_color_active'] = $settings->getMenuColorActive();
+        });
     }
 
     public function registerComponents(): array
@@ -57,34 +63,18 @@ class Plugin extends PluginBase
         ];
     }
 
-    /**
-     * Registers any back-end permissions used by this plugin.
-     *
-     * @return array
-     */
-    public function registerPermissions()
-    {
-        return []; // Remove this line to activate
-
-        return [
-            'dimsog.blog.some_permission' => [
-                'tab' => 'Blog',
-                'label' => 'Some permission'
-            ],
-        ];
-    }
-
-    public function registerMarkupTags(): array
+    public function registerSettings(): array
     {
         return [
-            'filters' => [
-                'preparePost' => function (?string $value): string {
-                    return preg_replace(
-                        '/(\<p\>\<img src="(.+)"(.*)\>\<\/p>)/',
-                        '<div class="post-view__image"><img src="$2"></div>',
-                        $value
-                    );
-                }
+            'comments' => [
+                'label' => 'dimsog.blog::lang.settings.name',
+                'description' => '',
+                'category' => 'dimsog.blog::lang.settings.name',
+                'icon' => 'icon-file-text-o',
+                'class' => Settings::class,
+                'order' => 500,
+                'keywords' => 'blog',
+                'permissions' => []
             ]
         ];
     }
@@ -94,7 +84,7 @@ class Plugin extends PluginBase
      *
      * @return array
      */
-    public function registerNavigation()
+    public function registerNavigation(): array
     {
         return [
             'blog' => [
@@ -104,10 +94,10 @@ class Plugin extends PluginBase
                 'permissions' => ['*'],
                 'order'       => 500,
                 'sideMenu' => [
-                    'categories' => [
-                        'label'       => 'dimsog.blog::lang.plugin.navigation.categories',
-                        'url'         => Backend::url('dimsog/blog/categories'),
-                        'icon'        => 'icon-list-ul',
+                    'new_post' => [
+                        'label'       => 'dimsog.blog::lang.plugin.navigation.new_post',
+                        'url'         => Backend::url('dimsog/blog/posts/create'),
+                        'icon'        => ' icon-plus',
                         'permissions' => ['*'],
                         'order'       => 500
                     ],
@@ -118,22 +108,22 @@ class Plugin extends PluginBase
                         'permissions' => ['*'],
                         'order'       => 500
                     ],
+                    'categories' => [
+                        'label'       => 'dimsog.blog::lang.plugin.navigation.categories',
+                        'url'         => Backend::url('dimsog/blog/categories'),
+                        'icon'        => 'icon-list-ul',
+                        'permissions' => ['*'],
+                        'order'       => 500
+                    ],
                     'tags' => [
                         'label'       => 'dimsog.blog::lang.plugin.navigation.tags',
                         'url'         => Backend::url('dimsog/blog/tags'),
                         'icon'        => 'icon-link',
                         'permissions' => ['*'],
                         'order'       => 500
-                    ],
-                    'posttypes' => [
-                        'label'       => 'dimsog.blog::lang.plugin.navigation.posttypes',
-                        'url'         => Backend::url('dimsog/blog/posttypes'),
-                        'icon'        => 'icon-list-ul',
-                        'permissions' => ['*'],
-                        'order'       => 500
                     ]
                 ]
-            ],
+            ]
         ];
     }
 }

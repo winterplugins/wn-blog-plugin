@@ -1,5 +1,5 @@
-<article class="post-item {% if post.type_id == 1 %} post-item--full {% else %} post-item--status {% endif %}">
-    {% if post.type_id == 1 %}
+<article class="post-item {% if post.type == 'post' %} post-item--full {% else %} post-item--status {% endif %}">
+    {% if post.type == 'post' %}
     <header class="post-item__header">
         <h3>
             <a href="{{ 'post-view' | page({ slug: post.slug }) }}" class="post-item__link">
@@ -20,8 +20,5 @@
     </section>
     {% else %}
         {{ post.name }}
-        <section class="post-item__image">
-            <img src="{{ post.image.getThumb(700, 400) }}" class="img-fluid" alt="{{ post.image.name }}" loading="lazy">
-        </section>
     {% endif %}
 </article>

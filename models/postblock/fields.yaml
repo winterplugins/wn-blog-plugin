@@ -1,0 +1,33 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    type:
+        label: Type
+        type: dropdown
+        default: 'text'
+    text:
+        label: Text
+        type: richeditor
+        dependsOn: type
+        size: giant
+    code:
+        label: Code
+        type: codeeditor
+        dependsOn: type
+        size: giant
+    image:
+        label: Image
+        hidden: true
+        mode: image
+        type: fileupload
+        dependsOn: type
+        thumbOptions:
+            mode: crop
+            extension: auto
+    position:
+        label: Position
+        context:
+            - update
+        required: true
