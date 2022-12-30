@@ -19,4 +19,54 @@ class Settings extends Model
     public $attachOne = [
         'poster' => [File::class, 'delete' => true]
     ];
+
+    public function getBlogName(): ?string
+    {
+        return $this->name;
+    }
+
+    public function getBlogDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function getBlogPoster(): ?File
+    {
+        return $this->poster;
+    }
+
+    public function getMainPageMetaTitle(): string
+    {
+        return empty($this->main_page_meta_title) ? 'Blog' : $this->main_page_meta_title;
+    }
+
+    public function getMainPageMetaDescription(): ?string
+    {
+        return $this->main_page_meta_description;
+    }
+
+    public function getBlogNameColor(): string
+    {
+        return empty($this->blog_name_color) ? '#fff' : $this->blog_name_color;
+    }
+
+    public function getDescriptionColor(): string
+    {
+        return empty($this->description_color) ? '#fff' : $this->description_color;
+    }
+
+    public function getMenuColor(): string
+    {
+        return empty($this->menu_color) ? '#fff' : $this->menu_color;
+    }
+
+    public function getMenuColorHover(): string
+    {
+        return empty($this->menu_color_hover) ? '#fff' : $this->menu_color_hover;
+    }
+
+    public function getMenuColorActive(): string
+    {
+        return empty($this->menu_color_active) ? '#fff' : $this->menu_color_active;
+    }
 }

@@ -16,7 +16,19 @@ return [
         'name' => 'Blog',
         'blog_name' => 'Blog name',
         'blog_description' => 'Blog description',
-        'poster' => 'Poster'
+        'poster' => 'Poster',
+        'blog_name_color' => 'Blog name color',
+        'description_color' => 'Description color',
+        'menu_color' => 'Menu color',
+        'menu_color_hover' => 'Menu color (hover)',
+        'menu_color_active' => 'Menu color (active)',
+        'main_page_meta_title' => 'Main page title',
+        'main_page_meta_description' => 'Main page meta description',
+        'tabs' => [
+            'general' => 'General',
+            'colors' => 'Colors',
+            'seo' => 'Seo'
+        ]
     ],
     'models' => [
         'category' => [

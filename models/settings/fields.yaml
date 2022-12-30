@@ -1,15 +1,46 @@
-fields:
-  name:
-    label: dimsog.blog::lang.settings.blog_name
-    default: A simple blog
-    required: true
-  description:
-    label: dimsog.blog::lang.settings.blog_description
-  poster:
-    label: dimsog.blog::lang.settings.poster
-    mode: image
-    type: fileupload
-    dependsOn: type
-    thumbOptions:
-      mode: crop
-      extension: auto
+tabs:
+  fields:
+    name:
+      label: dimsog.blog::lang.settings.blog_name
+      tab: dimsog.blog::lang.settings.tabs.general
+      default: A simple blog
+      required: true
+    description:
+      label: dimsog.blog::lang.settings.blog_description
+      tab: dimsog.blog::lang.settings.tabs.general
+    poster:
+      label: dimsog.blog::lang.settings.poster
+      tab: dimsog.blog::lang.settings.tabs.general
+      mode: image
+      type: fileupload
+      dependsOn: type
+      thumbOptions:
+        mode: crop
+        extension: auto
+    main_page_meta_title:
+      label: dimsog.blog::lang.settings.main_page_meta_title
+      tab: dimsog.blog::lang.settings.tabs.seo
+      default: test
+    main_page_meta_description:
+      label: dimsog.blog::lang.settings.main_page_meta_description
+      tab: dimsog.blog::lang.settings.tabs.seo
+    blog_name_color:
+      label: dimsog.blog::lang.settings.blog_name_color
+      tab: dimsog.blog::lang.settings.tabs.colors
+      type: colorpicker
+    description_color:
+      label: dimsog.blog::lang.settings.description_color
+      tab: dimsog.blog::lang.settings.tabs.colors
+      type: colorpicker
+    menu_color:
+      label: dimsog.blog::lang.settings.menu_color
+      tab: dimsog.blog::lang.settings.tabs.colors
+      type: colorpicker
+    menu_color_hover:
+      label: dimsog.blog::lang.settings.menu_color_hover
+      tab: dimsog.blog::lang.settings.tabs.colors
+      type: colorpicker
+    menu_color_active:
+      label: dimsog.blog::lang.settings.menu_color_active
+      tab: dimsog.blog::lang.settings.tabs.colors
+      type: colorpicker

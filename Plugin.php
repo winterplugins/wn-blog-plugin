@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Dimsog\Blog;
 
 use Backend;
+use Cms\Classes\Page;
 use Dimsog\Blog\Components\CategoriesList;
 use Dimsog\Blog\Components\PostsList;
 use Dimsog\Blog\Components\PostView;
@@ -30,6 +31,26 @@ class Plugin extends PluginBase
             'author'      => 'Dimsog',
             'icon'        => 'icon-leaf'
         ];
+    }
+
+    public function boot(): void
+    {
+        Page::extend(static function (Page $page): void {
+            /** @var Settings $settings */
+            $settings = Settings::instance();
+
+            $page['blog_meta_title'] = $settings->getMainPageMetaTitle();
+            $page['blog_meta_description'] = $settings->getBlogDescription();
+            $page['blog_name'] = $settings->getBlogName();
+            $page['blog_description'] = $settings->getBlogDescription();
+            $page['blog_poster'] = $settings->getBlogPoster();
+            $page['blog_main_page_meta_title'] = $settings->getMainPageMetaTitle();
+            $page['blog_name_color'] = $settings->getBlogNameColor();
+            $page['blog_description_color'] = $settings->getDescriptionColor();
+            $page['blog_menu_color'] = $settings->getMenuColor();
+            $page['blog_menu_color_hover'] = $settings->getMenuColorHover();
+            $page['blog_menu_color_active'] = $settings->getMenuColorActive();
+        });
     }
 
     public function registerComponents(): array
