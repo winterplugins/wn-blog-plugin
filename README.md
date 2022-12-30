@@ -1,6 +1,8 @@
 # Blog Plugin for WinterCMS
 A simple blog plugin for WinterCMS
 
+![image](https://user-images.githubusercontent.com/904958/210078044-aaf373f3-6ac8-4976-8d69-e607441481ff.png)
+[The default blog theme](https://github.com/dimsog/wn-blog-theme)
 ![image](https://user-images.githubusercontent.com/904958/209973269-583281e3-1e5f-4225-bfdb-7fe550520d2a.png)
 ![image](https://user-images.githubusercontent.com/904958/209974297-6961c24f-bf8e-4577-8c57-bc08d6c3f174.png)
 
