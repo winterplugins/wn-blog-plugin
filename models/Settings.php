@@ -37,7 +37,7 @@ class Settings extends Model
 
     public function getMainPageMetaTitle(): string
     {
-        return empty($this->main_page_meta_title) ? 'Blog' : $this->main_page_meta_title;
+        return empty($this->main_page_meta_title) ? 'Blog plugin' : $this->main_page_meta_title;
     }
 
     public function getMainPageMetaDescription(): ?string
