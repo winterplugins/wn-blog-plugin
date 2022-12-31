@@ -22,7 +22,7 @@ class Settings extends Model
 
     public function getBlogName(): ?string
     {
-        return $this->name;
+        return empty($this->name) ? 'Blog plugin' : $this->name;
     }
 
     public function getBlogDescription(): ?string
