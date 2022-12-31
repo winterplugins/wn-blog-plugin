@@ -21,3 +21,5 @@
     - 'New: a post blocks'
     - 'New: minor code improvements'
     - 'Removed: post_types table'
+1.0.5:
+    - 'Fix: text to blocks migration'

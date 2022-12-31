@@ -18,7 +18,8 @@ class MoveTextToBlocks extends Migration
                 $block = new PostBlock();
                 $block->post_id = $post->id;
                 $block->position = 1;
-                $block->text = 1;
+                $block->text = $post->text;
+                $block->type = 'text';
                 $block->save();
             }
         }
