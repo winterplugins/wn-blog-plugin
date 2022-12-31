@@ -1,7 +1,7 @@
 {
     "name": "dimsog/wn-blog-plugin",
     "type": "winter-plugin",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "description": "A simple blog plugin for WinterCMS",
     "keywords": ["blog", "winter", "winter blog plugin", "wintercms blog plugin"],
     "license": "MIT",
