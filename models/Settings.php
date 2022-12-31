@@ -27,7 +27,7 @@ class Settings extends Model
 
     public function getBlogDescription(): ?string
     {
-        return $this->description;
+        return empty($this->description) ? 'A simple blog plugin for WinterCMS' : $this->description;
     }
 
     public function getBlogPoster(): ?File
