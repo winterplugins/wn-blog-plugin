@@ -3,7 +3,6 @@ tabs:
     name:
       label: dimsog.blog::lang.settings.blog_name
       tab: dimsog.blog::lang.settings.tabs.general
-      required: true
     description:
       label: dimsog.blog::lang.settings.blog_description
       tab: dimsog.blog::lang.settings.tabs.general
