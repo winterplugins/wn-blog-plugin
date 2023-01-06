@@ -1,4 +1,4 @@
-<article class="post-item {% if post.type == 'post' %} post-item--full {% else %} post-item--status {% endif %}">
+<article class="post-item post-item-{{ post.id }} {% if post.type == 'post' %}post-item--full{% else %}post-item--status{% endif %}">
     {% if post.type == 'post' %}
     <header class="post-item__header">
         <h3>

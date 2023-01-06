@@ -3,8 +3,6 @@ tabs:
     name:
       label: dimsog.blog::lang.settings.blog_name
       tab: dimsog.blog::lang.settings.tabs.general
-      default: A simple blog
-      required: true
     description:
       label: dimsog.blog::lang.settings.blog_description
       tab: dimsog.blog::lang.settings.tabs.general
@@ -20,7 +18,6 @@ tabs:
     main_page_meta_title:
       label: dimsog.blog::lang.settings.main_page_meta_title
       tab: dimsog.blog::lang.settings.tabs.seo
-      default: test
     main_page_meta_description:
       label: dimsog.blog::lang.settings.main_page_meta_description
       tab: dimsog.blog::lang.settings.tabs.seo

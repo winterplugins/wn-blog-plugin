@@ -22,12 +22,12 @@ class Settings extends Model
 
     public function getBlogName(): ?string
     {
-        return $this->name;
+        return empty($this->name) ? 'Blog plugin' : $this->name;
     }
 
     public function getBlogDescription(): ?string
     {
-        return $this->description;
+        return empty($this->description) ? 'A simple blog plugin for WinterCMS' : $this->description;
     }
 
     public function getBlogPoster(): ?File
@@ -37,7 +37,7 @@ class Settings extends Model
 
     public function getMainPageMetaTitle(): string
     {
-        return empty($this->main_page_meta_title) ? 'Blog' : $this->main_page_meta_title;
+        return empty($this->main_page_meta_title) ? 'Blog plugin' : $this->main_page_meta_title;
     }
 
     public function getMainPageMetaDescription(): ?string

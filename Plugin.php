@@ -40,7 +40,7 @@ class Plugin extends PluginBase
             $settings = Settings::instance();
 
             $page['blog_meta_title'] = $settings->getMainPageMetaTitle();
-            $page['blog_meta_description'] = $settings->getBlogDescription();
+            $page['blog_meta_description'] = $settings->getMainPageMetaDescription();
             $page['blog_name'] = $settings->getBlogName();
             $page['blog_description'] = $settings->getBlogDescription();
             $page['blog_poster'] = $settings->getBlogPoster();
