@@ -49,8 +49,8 @@ class TagView extends ComponentBase
     {
         return [
             'slug' => [
-                'title' => 'URL',
-                'description' => 'Укажите тег',
+                'title' => 'dimsog.blog::lang.components.tag_view.slug',
+                'description' => '',
                 'default' => null,
                 'type' => 'string'
             ],

@@ -109,13 +109,17 @@ return [
     ],
     'components' => [
         'tag_view' => [
-            'name' => 'View tag'
+            'name' => 'View tag',
+            'slug' => 'Slug'
         ],
         'post_view' => [
-            'name' => 'View post'
+            'name' => 'View post',
+            'slug' => 'Slug'
         ],
         'posts_list' => [
-            'name' => 'Posts'
+            'name' => 'Posts',
+            'category_slug' => 'Category slug',
+            'limit' => 'Limit'
         ],
         'categories_list' => [
             'name' => 'Categories'

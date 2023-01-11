@@ -53,13 +53,13 @@ class PostsList extends ComponentBase
     {
         return [
             'categorySlug' => [
-                'title' => 'URL категории',
-                'description' => 'Укажите категорию, из которой брать записи',
+                'title' => 'dimsog.blog::lang.components.posts_list.category_slug',
+                'description' => '',
                 'default' => null,
                 'type' => 'string'
             ],
             'limit' => [
-                'title' => 'Limit',
+                'title' => 'dimsog.blog::lang.components.posts_list.limit',
                 'default' => 20
             ]
         ];
