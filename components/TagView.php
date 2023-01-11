@@ -40,7 +40,7 @@ class TagView extends ComponentBase
     public function componentDetails(): array
     {
         return [
-            'name'        => 'Просмотр тега',
+            'name'        => 'dimsog.blog::lang.components.tag_view.name',
             'description' => ''
         ];
     }

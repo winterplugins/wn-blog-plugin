@@ -31,7 +31,7 @@ class PostView extends ComponentBase
     public function componentDetails(): array
     {
         return [
-            'name'        => 'Просмотр записи',
+            'name'        => 'dimsog.blog::lang.components.post_view.name',
             'description' => ''
         ];
     }

@@ -107,4 +107,18 @@ return [
             'name' => 'Tags',
         ],
     ],
+    'components' => [
+        'tag_view' => [
+            'name' => 'View tag'
+        ],
+        'post_view' => [
+            'name' => 'View post'
+        ],
+        'posts_list' => [
+            'name' => 'Posts'
+        ],
+        'categories_list' => [
+            'name' => 'Categories'
+        ]
+    ]
 ];

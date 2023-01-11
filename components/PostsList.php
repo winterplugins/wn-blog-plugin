@@ -21,7 +21,7 @@ class PostsList extends ComponentBase
     public function componentDetails(): array
     {
         return [
-            'name'        => 'Список записей',
+            'name'        => 'dimsog.blog::lang.components.posts_list.name',
             'description' => ''
         ];
     }
