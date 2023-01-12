@@ -29,7 +29,7 @@ class Plugin extends PluginBase
             'name'        => 'dimsog.blog::lang.plugin.name',
             'description' => 'dimsog.blog::lang.plugin.description',
             'author'      => 'Dimsog',
-            'icon'        => 'icon-leaf'
+            'icon'        => 'icon-th-list'
         ];
     }
 

@@ -16,7 +16,7 @@ class CategoriesList extends ComponentBase
     public function componentDetails(): array
     {
         return [
-            'name'        => 'Список категорий',
+            'name'        => 'dimsog.blog::lang.components.categories_list.name',
             'description' => ''
         ];
     }

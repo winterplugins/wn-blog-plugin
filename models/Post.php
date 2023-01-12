@@ -4,16 +4,16 @@ declare(strict_types=1);
 
 namespace Dimsog\Blog\Models;
 
-use Illuminate\Database\Eloquent\Collection;
-use Model;
 use System\Models\File;
+use Winter\Storm\Database\Model;
+use Winter\Storm\Database\Traits\Validation;
 
 /**
  * Post Model
  */
 class Post extends Model
 {
-    use \Winter\Storm\Database\Traits\Validation;
+    use Validation;
 
     /**
      * @var string The database table used by the model.

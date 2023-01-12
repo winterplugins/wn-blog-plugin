@@ -7,7 +7,6 @@ namespace Dimsog\Blog\Components;
 use Cms\Classes\ComponentBase;
 use Dimsog\Blog\Classes\PostsReader;
 use Dimsog\Blog\Models\Tag;
-use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Pagination\LengthAwarePaginator;
 
 class TagView extends ComponentBase
@@ -40,7 +39,7 @@ class TagView extends ComponentBase
     public function componentDetails(): array
     {
         return [
-            'name'        => 'Просмотр тега',
+            'name'        => 'dimsog.blog::lang.components.tag_view.name',
             'description' => ''
         ];
     }
@@ -49,8 +48,8 @@ class TagView extends ComponentBase
     {
         return [
             'slug' => [
-                'title' => 'URL',
-                'description' => 'Укажите тег',
+                'title' => 'dimsog.blog::lang.components.tag_view.slug',
+                'description' => '',
                 'default' => null,
                 'type' => 'string'
             ],

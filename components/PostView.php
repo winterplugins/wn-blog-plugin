@@ -31,7 +31,7 @@ class PostView extends ComponentBase
     public function componentDetails(): array
     {
         return [
-            'name'        => 'Просмотр записи',
+            'name'        => 'dimsog.blog::lang.components.post_view.name',
             'description' => ''
         ];
     }
@@ -40,8 +40,8 @@ class PostView extends ComponentBase
     {
         return [
             'slug' => [
-                'title' => 'URL',
-                'description' => 'Укажите пост',
+                'title' => 'dimsog.blog::lang.components.post_view.slug',
+                'description' => '',
                 'default' => null,
                 'type' => 'string'
             ],
