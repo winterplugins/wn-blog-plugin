@@ -7,7 +7,6 @@ namespace Dimsog\Blog\Components;
 use Cms\Classes\ComponentBase;
 use Dimsog\Blog\Classes\PostsReader;
 use Dimsog\Blog\Models\Tag;
-use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Pagination\LengthAwarePaginator;
 
 class TagView extends ComponentBase

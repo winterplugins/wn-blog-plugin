@@ -7,9 +7,7 @@ namespace Dimsog\Blog\Components;
 use Cms\Classes\ComponentBase;
 use Dimsog\Blog\Classes\PostsReader;
 use Dimsog\Blog\Models\Category;
-use Dimsog\Blog\Models\Post;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
-use Illuminate\Database\Eloquent\Collection;
 
 class PostsList extends ComponentBase
 {
