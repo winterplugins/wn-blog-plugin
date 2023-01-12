@@ -13,12 +13,13 @@ Please check: https://www.php.net/supported-versions.php
 * PHP 8.2
 
 ### Installation
+Install blog plugin (without theme):
 ```bash
 composer require dimsog/wn-blog-plugin
+php artisan winter:up
 ```
-
-Add the default theme
+Install blog plugin with default theme:
 ```bash
-composer require dimsog/wn-comments-plugin
 composer require dimsog/wn-blog-theme
+php artisan winter:up
 ```
