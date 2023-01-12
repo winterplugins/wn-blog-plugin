@@ -5,13 +5,14 @@ declare(strict_types=1);
 namespace Dimsog\Blog\Models;
 
 use Winter\Storm\Database\Model;
+use Winter\Storm\Database\Traits\Validation;
 
 /**
  * PostTag Model
  */
 class PostTag extends Model
 {
-    use \Winter\Storm\Database\Traits\Validation;
+    use Validation;
 
     /**
      * @var string The database table used by the model.

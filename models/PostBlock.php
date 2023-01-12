@@ -9,13 +9,14 @@ use Winter\Storm\Database\Model;
 use Winter\Storm\Database\Models\DeferredBinding as DeferredBindingModel;
 use Winter\Storm\Database\SortableScope;
 use Winter\Storm\Database\Traits\Sortable;
+use Winter\Storm\Database\Traits\Validation;
 
 /**
  * PostBlock Model
  */
 class PostBlock extends Model
 {
-    use \Winter\Storm\Database\Traits\Validation;
+    use Validation;
     use Sortable;
 
     const SORT_ORDER = 'position';

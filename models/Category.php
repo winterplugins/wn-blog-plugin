@@ -6,13 +6,14 @@ namespace Dimsog\Blog\Models;
 
 use Winter\Storm\Database\Model;
 use Winter\Storm\Database\Traits\Sluggable;
+use Winter\Storm\Database\Traits\Validation;
 
 /**
  * Category Model
  */
 class Category extends Model
 {
-    use \Winter\Storm\Database\Traits\Validation;
+    use Validation;
     use Sluggable;
 
     /**
