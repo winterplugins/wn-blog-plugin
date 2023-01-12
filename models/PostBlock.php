@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Dimsog\Blog\Models;
 
-use Model;
 use System\Models\File;
+use Winter\Storm\Database\Model;
 use Winter\Storm\Database\Models\DeferredBinding as DeferredBindingModel;
 use Winter\Storm\Database\SortableScope;
 use Winter\Storm\Database\Traits\Sortable;

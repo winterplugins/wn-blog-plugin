@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Dimsog\Blog\Models;
 
 use Illuminate\Database\Eloquent\Collection;
-use Model;
 use System\Models\File;
+use Winter\Storm\Database\Model;
 
 /**
  * Post Model

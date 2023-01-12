@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Dimsog\Blog\Models;
 
-use Model;
+use Winter\Storm\Database\Model;
 
 /**
  * PostTag Model
