@@ -28,3 +28,5 @@
 1.0.7:
     - PostSeeder.php
     - 'New: add the default post'
+1.0.8:
+    - 'Minor code improvements'
