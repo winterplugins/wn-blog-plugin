@@ -26,7 +26,7 @@ class PostsList extends ComponentBase
 
     public function onRun()
     {
-        $reader = new PostsReader($this->property('limit'));
+        $reader = new PostsReader((int)$this->property('limit'));
         $slug = $this->property('categorySlug');
         $this->category = Category::findBySlug($slug);
         if (empty($slug) == false && $this->category == null) {
