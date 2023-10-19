@@ -1,5 +1,5 @@
 <section class="posts">
-    {% for post in items %}
+    {% for post in items.sortByDesc('published_at') %}
         {% partial '@post-item' post = post %}
     {% endfor %}
 

@@ -47,7 +47,8 @@ return [
                 'id' => 'ID',
                 'category' => 'Category',
                 'name' => 'Name',
-                'active' => 'Active'
+                'active' => 'Active',
+                'published_at' => 'Published at'
             ],
             'fields' => [
                 'category' => 'Category',
@@ -59,7 +60,8 @@ return [
                 'text' => 'Text',
                 'tags' => 'Tags',
                 'general' => 'General',
-                'blocks' => 'Blocks'
+                'blocks' => 'Blocks',
+                'published_at' => 'Published at'
             ],
         ],
         'posttag' => [

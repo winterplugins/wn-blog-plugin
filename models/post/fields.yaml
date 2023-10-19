@@ -20,6 +20,11 @@ fields:
         type: textarea
         size: medium
         dependsOn: type
+    published_at:
+        tab: dimsog.blog::lang.models.post.fields.general
+        label: dimsog.blog::lang.models.post.fields.published_at
+        type: datepicker
+        size: full
 tabs:
     fields:
         blocks:
