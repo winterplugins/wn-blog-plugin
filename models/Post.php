@@ -14,7 +14,6 @@ use Winter\Storm\Database\Traits\Validation;
 class Post extends Model
 {
     use Validation;
-
     /**
      * @var string The database table used by the model.
      */
@@ -60,7 +59,8 @@ class Post extends Model
      */
     protected $dates = [
         'created_at',
-        'updated_at'
+        'updated_at',
+        'published_at',
     ];
 
     /**
@@ -134,4 +134,5 @@ class Post extends Model
                 break;
         }
     }
+
 }

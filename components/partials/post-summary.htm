@@ -5,7 +5,7 @@
         </a>
     </div>
     <div class="post-summary__item post-summary__item--date">
-        <i class="far fa-calendar-alt"></i> {{ post.created_at | date('d.m.Y') }}
+        <i class="far fa-calendar-alt"></i> {{ post.published_at ? post.published_at | date('d.m.Y') : post.created_at | date('d.m.Y') }}
     </div>
     <div class="post-summary__item post-summary__item--views">
         <i class="fas fa-eye"></i>

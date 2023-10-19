@@ -32,3 +32,6 @@
     - 'Minor code improvements'
 1.0.9:
     - 'Fix PostsList.php'
+1.0.10:
+    - add_published_at_to_posts.php
+    - 'Add Publised At to Posts With French translate'
